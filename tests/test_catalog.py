@@ -53,6 +53,15 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(published, build_catalog(revision=published["revision"]))
         self.assertEqual(published["catalog_id"], "kalinka")
 
+    def test_only_jamendo_and_localfiles_are_official(self):
+        plugins = build_catalog()["plugins"]
+        official = {"jamendo", "localfiles"}
+        self.assertEqual({p["id"] for p in plugins if p["tier"] == "official"}, official)
+        for plugin in plugins:
+            with self.subTest(plugin=plugin["id"]):
+                self.assertEqual(plugin["tier"],
+                                 "official" if plugin["id"] in official else "unofficial")
+
     def test_native_platform_cannot_be_all(self):
         self.rename_wheel("kalinka_plugin_example_radio-1.2.0-cp311-cp311-manylinux_2_28_aarch64.whl")
         with self.assertRaisesRegex(ValueError, "platform"):

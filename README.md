@@ -10,12 +10,18 @@ This initial hub contains seven registered plugins, a JSON schema, an offline va
 | --- | --- | --- |
 | [Local Files](plugins/localfiles.json) | Input source | Local music files, metadata, and semantic search. |
 | [Jamendo](plugins/jamendo.json) | Input source | Browse and play independent music from Jamendo. |
-| [UPnP](plugins/upnp.json) | Input source | Playback from UPnP control applications. |
-| [MusicCast](plugins/musiccast.json) | Device control | Yamaha MusicCast volume, power, and configured-input control. |
 
-These plugins are included in the Kalinka server bundle, not independently updatable through this catalog. MusicCast declares its MusicCast / Yamaha Extended Control family and readable limitations; a verified exact-model list is not yet available.
+Local Files and Jamendo are the only official plugins in this catalog. Both are included in the Kalinka server bundle, not independently updatable through this catalog.
 
 ## Unofficial
+
+| Plugin | Type | Description |
+| --- | --- | --- |
+| [UPnP](plugins/upnp.json) | Input source | Playback from UPnP control applications. |
+| [MusicCast](plugins/musiccast.json) | Device control | Yamaha MusicCast volume, power, and configured-input control. |
+| [Dummy Device](plugins/dummydevice.json) | Device control | Experimental simulated output device for development and testing. |
+
+These three plugins are bundled with Kalinka and update with the server; being bundled does not make a plugin official. MusicCast declares its MusicCast / Yamaha Extended Control family and readable limitations; a verified exact-model list is not yet available.
 
 | Plugin | Type | Source and existing releases | Requirements |
 | --- | --- | --- | --- |
@@ -30,7 +36,7 @@ Managed Linux delivery is **native-package-first**. The initial curated distro a
 
 ## Experimental
 
-[Dummy Device](plugins/dummydevice.json) is an official development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify and Qobuz above are also experimental, while retaining their unofficial publisher tier.
+[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify and Qobuz above are also experimental, while retaining their unofficial publisher tier.
 
 `tier` describes maintenance authority; `maturity` describes readiness. They are independent. Plugin type is separately declared as `input_module` or `output_device`, matching the SDK.
 

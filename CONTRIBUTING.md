@@ -4,6 +4,8 @@ Create `plugins/<id>.json` following the schema. Keep the Kalinka `PLUGIN_ID`, d
 
 Catalog maintainers verify repository ownership, reserve identities, and assign `official` or `unofficial`. New community entries should propose `unofficial`; experimental quality is an independent maturity value. Changes to ownership, identity, or trust tier require maintainer review. Do not silently retarget an abandoned plugin to a new publisher.
 
+Jamendo and Local Files are the only official plugins in this catalog. Every other entry is unofficial, independently of whether it is bundled with the server or marked stable/experimental.
+
 ## Declare the plugin type
 
 Set the required `type` to the plugin class's `PLUGIN_TYPE.value`: `input_module` for an `InputModulePlugin`, or `output_device` for an `OutputDevicePlugin`. These appear as Input sources and Device control in KalinkaAI. Keep one type per catalog entry, matching the current SDK; `categories` is only for descriptive search tags such as `library`, `radio`, or `yamaha`.

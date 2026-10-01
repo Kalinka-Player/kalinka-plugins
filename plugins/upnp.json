@@ -9,7 +9,7 @@
   "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
   "license": "GPL-3.0-or-later",
   "source": {"repository": "https://github.com/Kalinka-Player/KalinkaPlayer", "subdirectory": "packages/kalinka-plugin-upnp"},
-  "tier": "official",
+  "tier": "unofficial",
   "maturity": "stable",
   "type": "input_module",
   "categories": ["network-audio"],
