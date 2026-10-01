@@ -262,7 +262,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--revision", default="local")
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--check", action="store_true", help="Check the public feed matches reviewed source entries without writing it")
     args = parser.parse_args()
+    if args.check:
+        published = read_json(args.output)
+        expected = build_catalog(revision=published["revision"])
+        if published != expected:
+            raise ValueError("Public catalog is stale; rebuild catalog.json from plugins/")
+        print(f"Public catalog matches {len(expected['plugins'])} reviewed entries")
+        return
     catalog = build_catalog(revision=args.revision)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(catalog, indent=2, sort_keys=True) + "\n", encoding="utf-8")

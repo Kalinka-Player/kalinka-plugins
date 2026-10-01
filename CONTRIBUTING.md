@@ -46,4 +46,6 @@ A `py3-none-any` wheel must declare `platform: all` and `architectures: ["all"]`
 
 ## Review and automation
 
+After changing `plugins/`, rebuild the root `catalog.json` using the commands in [the README](README.md#public-browsing-feed) and include it in the same review. CI checks that this public browsing feed matches the reviewed sources. It is deliberately unsigned and must not authorize installation; do not add self-declared `verified` flags or credentials. Preserve `catalog_id: "kalinka"` when moving hosting.
+
 Keep pull-request validation unprivileged. Never use pull-request-provided code or manifests in a workflow with publication secrets. Release automation may propose records; it must not approve its own changes, select its own trust tier, or replace catalog ownership. Signing and publication run only after reviewed changes enter the protected branch.

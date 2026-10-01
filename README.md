@@ -59,7 +59,20 @@ python3 -m venv .venv
 
 The builder checks metadata, identity uniqueness, version ranges, artifact identities, OS/architecture consistency, distro allowlists and URL structure. A tested reference target filter demonstrates fail-closed selection; it is not the runtime installer. The builder produces deterministic **unsigned** JSON without downloading, installing or importing plugins. CI repeats the tests and builds a catalog using the source commit as its revision.
 
-The result contains `schema_version: 1`, `catalog_id: "kalinka"`, `revision`, and `plugins`. A revision is an audit reference, not a signature. Neither a local build nor a raw GitHub JSON file authorizes installation. Signed publication, artifact inspection, server APIs, installer recovery and app integration remain separate work. No public automatic-update feed is enabled by this initial commit.
+The result contains `schema_version: 1`, `catalog_id: "kalinka"`, `revision`, and `plugins`. A revision is an audit reference, not a signature. Neither a local build nor a raw GitHub JSON file authorizes installation. Signed publication, artifact inspection, installer recovery and app integration remain separate work. No automatic-update authorization is enabled by this feed.
+
+## Public browsing feed
+
+[`catalog.json`](catalog.json) is the generated public browsing feed. After it is committed and pushed, it is available at `https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/catalog.json`, without a login or GitHub token. CI refuses a feed that differs from the reviewed source entries. When plugin metadata changes, regenerate the feed and include it in the same review:
+
+```sh
+.venv/bin/python tools/catalog.py --revision "$(git rev-parse HEAD)" --output catalog.json
+.venv/bin/python tools/catalog.py --check --output catalog.json
+```
+
+The revision identifies the source baseline; the document's content hash distinguishes changed bytes. Neither is signature verification. The server's public reader validates this feed for display only and reports its trust as unverified; it does not use it to register installations or authorize updates.
+
+Set `KALINKA_PLUGIN_CATALOG_BASE_URL` on the server to change its serving location. The default is the GitHub directory above, and the reader appends `catalog.json`. An empty value disables fetching. To migrate later, publish it under `https://kalinkaplayer.com/plugins/` and point the server there, keeping `catalog_id: "kalinka"` and all plugin IDs unchanged. The hostname is not part of plugin identity. See [architecture](docs/architecture.md#publication-and-updates) for cache behavior and the separate production signing requirement.
 
 ## License
 

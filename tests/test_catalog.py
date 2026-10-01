@@ -48,6 +48,11 @@ class CatalogTests(unittest.TestCase):
         })
         self.assertEqual(catalog, build_catalog())
 
+    def test_public_feed_matches_reviewed_entries(self):
+        published = read_json(ROOT / "catalog.json")
+        self.assertEqual(published, build_catalog(revision=published["revision"]))
+        self.assertEqual(published["catalog_id"], "kalinka")
+
     def test_native_platform_cannot_be_all(self):
         self.rename_wheel("kalinka_plugin_example_radio-1.2.0-cp311-cp311-manylinux_2_28_aarch64.whl")
         with self.assertRaisesRegex(ValueError, "platform"):
