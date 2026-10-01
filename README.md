@@ -19,7 +19,7 @@ These plugins are included in the Kalinka server bundle, not independently updat
 
 | Plugin | Type | Source and existing releases | Requirements |
 | --- | --- | --- | --- |
-| [Spotify Connect](plugins/spotify.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-spotify) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases) | Linux, Python 3.11+, SDK ≥3.5 and <4, Spotify Premium, patched librespot, and matching server/renderer streaming support. |
+| [Spotify Connect](plugins/spotify.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-spotify) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases) | Linux, Python 3.11+, server ≥5.3.0 and <6.0.0, renderer ≥0.5.0 and <1.0.0, SDK ≥3.5 and <4, Spotify Premium, and patched librespot. |
 | [Qobuz](plugins/qobuz.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-qobuz) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases) | Active Qobuz subscription; current version 5 documentation requires server ≥5.2 and SDK ≥3.4 and <4. |
 
 Both integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.

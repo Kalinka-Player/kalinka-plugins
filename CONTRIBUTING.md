@@ -30,6 +30,8 @@ Curators review these claims against the plugin implementation and the author's 
 
 Use `requires.notes` for operational requirements such as a service account or supported device. Use `requires.capabilities` only for recognized machine-checkable requirements; it is not a place for shell commands. Native dependencies must be available on each supported target, even when the plugin's own wheel is `all`.
 
+Specify server and renderer requirements using released versions and keep readable notes consistent with the machine-readable ranges. Never require users to identify a source commit or check repository ancestry: they install prebuilt packages. Keep source hashes in provenance fields, not compatibility requirements.
+
 New bytes require a new version. To retract a release, set `withdrawn` and explain `withdrawal_reason`; preserve its historical record. A withdrawal prevents installation and automatic updates to that release, but does not authorize deletion of users' installations or data.
 
 ## Declare OS and architecture support

@@ -91,6 +91,18 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaises(ValidationError):
             self.validate()
 
+    def test_seed_requirements_use_versions_not_source_commits(self):
+        entries = {p["id"]: p for p in build_catalog()["plugins"]}
+        spotify = entries["spotify"]["releases"][0]
+        self.assertEqual(spotify["requires"]["server"], ">=5.3,<6")
+        self.assertEqual(spotify["requires"]["renderer"], ">=0.5,<1")
+        for plugin in entries.values():
+            for release in plugin["releases"]:
+                with self.subTest(plugin=plugin["id"], version=release["version"]):
+                    self.assertNotRegex(json.dumps(release["requires"]),
+                                        r"(?i)\bcommits?\b|\b[0-9a-f]{40}\b")
+                    self.assertRegex(release["source_commit"], r"^[0-9a-f]{40}$")
+
     def test_only_sdk_plugin_type_values_are_accepted(self):
         for value in ("input_module", "output_device"):
             with self.subTest(value=value):

@@ -35,6 +35,8 @@ Evaluate the **server host**, not the phone/tablet running KalinkaAI. Native pac
 | `requires.server/sdk/python/renderer` | PEP 440 ranges for component versions; renderer optional, but mandatory to check when declared. |
 | `requires.capabilities` | Recognized, machine-checkable runtime capabilities. Unknown or unobservable requirements fail closed. |
 
+Server and renderer compatibility is expressed using released version ranges, never source commit IDs or repository ancestry. Users install prebuilt components. Plugin `source_commit` and catalog `revision` remain build/audit provenance only; they are not installed-component requirements and must not appear as such in the UI.
+
 Canonical architecture aliases include DEB `amd64` → `x86_64`, DEB `arm64` → `aarch64`, and DEB `all` / RPM `noarch` → `all`. A DEB with `all` architecture is still Linux-only and distro-limited. The initial Spotify records admit x86-64 and ARM64 only; Qobuz's DEB is architecture-independent. All still require an eligible server, package backend and resolvable dependencies.
 
 `artifact_supports_target` in the builder is a reference filter for validated data. It rejects unknown host identities, wrong package format, mismatched architectures and unlisted distro versions. It is only one input to an install decision, not authorization. The eventual server must additionally:
