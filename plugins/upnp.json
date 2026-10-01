@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "upnp",
+  "name": "UPnP",
+  "description": "Expose Kalinka as a UPnP MediaRenderer so network control apps can play through the selected Kalinka output.",
+  "distribution": "kalinka-plugin-upnp",
+  "entry_point": "kalinka_plugin_upnp",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/KalinkaPlayer", "subdirectory": "packages/kalinka-plugin-upnp"},
+  "tier": "official",
+  "maturity": "stable",
+  "type": "input_module",
+  "categories": ["network-audio"],
+  "delivery": "bundle",
+  "releases": []
+}

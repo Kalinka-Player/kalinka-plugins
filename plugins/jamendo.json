@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "jamendo",
+  "name": "Jamendo",
+  "description": "Browse and play music from Jamendo, with optional mood and semantic search over its catalog.",
+  "distribution": "kalinka-plugin-jamendo",
+  "entry_point": "kalinka_plugin_jamendo",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/KalinkaPlayer", "subdirectory": "packages/kalinka-plugin-jamendo"},
+  "tier": "official",
+  "maturity": "stable",
+  "type": "input_module",
+  "categories": ["streaming"],
+  "delivery": "bundle",
+  "releases": []
+}

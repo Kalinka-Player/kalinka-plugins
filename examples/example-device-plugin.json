@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "example-device",
+  "name": "Example Device Control",
+  "description": "Synthetic model-and-family metadata example. Not a real device plugin.",
+  "distribution": "kalinka-plugin-example-device",
+  "entry_point": "kalinka_plugin_example_device",
+  "creator": {"name": "Example Author", "url": "https://example.invalid/author"},
+  "maintainers": [{"name": "Example Author", "url": "https://example.invalid/author"}],
+  "license": "MIT",
+  "source": {"repository": "https://example.invalid/example-device", "subdirectory": ""},
+  "type": "output_device",
+  "device_support": {
+    "models": ["Example Audio Demo AVR 100", "Example Audio Demo Amp 200"],
+    "families": ["Example Audio Demo Network Control"],
+    "notes": [
+      "All manufacturer, model and family names in this file are fictional.",
+      "Example requirement: local network control must be enabled; only the main zone is supported. Do not infer RS-232 support from a network-control family."
+    ]
+  },
+  "tier": "unofficial",
+  "maturity": "experimental",
+  "categories": ["network-control"],
+  "delivery": "independent",
+  "releases": []
+}

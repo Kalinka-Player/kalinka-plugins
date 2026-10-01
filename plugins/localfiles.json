@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "localfiles",
+  "name": "Local Files",
+  "description": "Index a local or network music library, enrich its metadata, and optionally enable semantic music search.",
+  "distribution": "kalinka-plugin-localfiles",
+  "entry_point": "kalinka_plugin_localfiles",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/KalinkaPlayer", "subdirectory": "packages/kalinka-plugin-localfiles"},
+  "tier": "official",
+  "maturity": "stable",
+  "type": "input_module",
+  "categories": ["library"],
+  "delivery": "bundle",
+  "releases": []
+}

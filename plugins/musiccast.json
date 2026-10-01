@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "musiccast",
+  "name": "MusicCast",
+  "description": "Control volume, power, and input selection on Yamaha MusicCast devices.",
+  "distribution": "kalinka-plugin-musiccast",
+  "entry_point": "kalinka_plugin_musiccast",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/KalinkaPlayer", "subdirectory": "packages/kalinka-plugin-musiccast"},
+  "tier": "official",
+  "maturity": "stable",
+  "type": "output_device",
+  "device_support": {
+    "models": [],
+    "families": ["Yamaha MusicCast / Yamaha Extended Control"],
+    "notes": [
+      "Requires a Yamaha MusicCast device exposing the Yamaha Extended Control API on the local network.",
+      "Family-level coverage only; this catalog does not yet contain a verified exact-model list. Check the device's protocol support and configured zone and input.",
+      "Provides volume read/set, power on/standby, and readiness for Kalinka's configured input. Input switching targets that configured input; mute is not exposed."
+    ]
+  },
+  "categories": ["yamaha", "network-control"],
+  "delivery": "bundle",
+  "releases": []
+}

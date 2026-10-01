@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "dummydevice",
+  "name": "Dummy Device",
+  "description": "A simulated output device for plugin development and testing.",
+  "distribution": "kalinka-plugin-dummydevice",
+  "entry_point": "kalinka_plugin_dummydevice",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/KalinkaPlayer", "subdirectory": "packages/kalinka-plugin-dummydevice"},
+  "tier": "official",
+  "maturity": "experimental",
+  "type": "output_device",
+  "device_support": {
+    "models": [],
+    "families": ["Kalinka simulated devices"],
+    "notes": ["Development and testing only. This plugin simulates an output device and does not control a physical amplifier or AVR."]
+  },
+  "categories": ["development"],
+  "delivery": "bundle",
+  "releases": []
+}

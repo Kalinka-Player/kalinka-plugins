@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "spotify",
+  "name": "Spotify Connect",
+  "description": "Unofficial Spotify Connect input for Kalinka. Requires Linux, Spotify Premium, the Kalinka-patched librespot bridge, and compatible server and renderer components.",
+  "distribution": "kalinka-plugin-spotify",
+  "entry_point": "kalinka_plugin_spotify",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "MIT",
+  "source": {"repository": "https://github.com/Kalinka-Player/kalinka-plugin-spotify", "subdirectory": ""},
+  "type": "input_module",
+  "tier": "unofficial",
+  "maturity": "experimental",
+  "categories": ["spotify", "streaming", "connect"],
+  "delivery": "independent",
+  "releases": [
+    {
+      "version": "0.2.0",
+      "channel": "stable",
+      "published_at": "2026-09-29T18:37:14Z",
+      "source_tag": "kalinka-plugin-spotify-v0.2.0",
+      "source_commit": "348cd564cb0a4f82dce00f492691eee23033a0b4",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/tag/kalinka-plugin-spotify-v0.2.0",
+      "requires": {
+        "server": ">=5.3,<6",
+        "sdk": ">=3.5,<4",
+        "python": ">=3.11",
+        "renderer": ">=0.5,<1",
+        "platforms": ["linux"],
+        "architectures": ["x86_64", "aarch64"],
+        "capabilities": [],
+        "notes": [
+          "Spotify Premium is required. The packages include Kalinka's patched librespot executable.",
+          "Server and renderer must contain KalinkaPlayer commit ad91659ba259f9dbc195f3618653985116407263 (released in server 5.3.0 and renderer 0.5.0). Updating only the SDK is insufficient.",
+          "Initial distro allowlist is conservative: Debian 13, Ubuntu 24.04 and Fedora 44. Derivatives must match an explicitly listed OS identity; a 64-bit CPU with a 32-bit userspace does not qualify."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-spotify_0.2.0_amd64.deb",
+          "platform": "linux",
+          "architectures": ["x86_64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0.2.0", "architecture": "amd64"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.0/kalinka-plugin-spotify_0.2.0_amd64.deb",
+          "sha256": "122116363e0c5794f2c0db94de36f5138c5550a7d1ca5638f04e6253b137f548",
+          "size_bytes": 4077896
+        },
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-spotify_0.2.0_arm64.deb",
+          "platform": "linux",
+          "architectures": ["aarch64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0.2.0", "architecture": "arm64"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.0/kalinka-plugin-spotify_0.2.0_arm64.deb",
+          "sha256": "403014e0ebfc6804def051ff685d8625531b4bf5da06c6cb05c11504d4f0a4f6",
+          "size_bytes": 3658732
+        },
+        {
+          "format": "rpm",
+          "filename": "kalinka-plugin-spotify-0.2.0-1.fc44.x86_64.rpm",
+          "platform": "linux",
+          "architectures": ["x86_64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0:0.2.0-1.fc44", "architecture": "x86_64"},
+          "targets": [{"id": "fedora", "versions": ["44"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.0/kalinka-plugin-spotify-0.2.0-1.fc44.x86_64.rpm",
+          "sha256": "8c1d7d2b32724b5e9609909755e36980b23e4bc1008f6d5976d485fb8add18ca",
+          "size_bytes": 4450040
+        },
+        {
+          "format": "rpm",
+          "filename": "kalinka-plugin-spotify-0.2.0-1.fc44.aarch64.rpm",
+          "platform": "linux",
+          "architectures": ["aarch64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0:0.2.0-1.fc44", "architecture": "aarch64"},
+          "targets": [{"id": "fedora", "versions": ["44"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.0/kalinka-plugin-spotify-0.2.0-1.fc44.aarch64.rpm",
+          "sha256": "795a70ad5bb0ef10b98ebf4fe8623b45a3729b563ba39498842aac53dffec37b",
+          "size_bytes": 4233886
+        }
+      ]
+    }
+  ]
+}

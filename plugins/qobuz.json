@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "qobuz",
+  "name": "Qobuz",
+  "description": "Unofficial Qobuz browsing, playback, and Qobuz Connect input for Kalinka. Requires an active Qobuz subscription. Not affiliated with or endorsed by Qobuz.",
+  "distribution": "kalinka-plugin-qobuz",
+  "entry_point": "kalinka_plugin_qobuz",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "Apache-2.0",
+  "source": {"repository": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz", "subdirectory": ""},
+  "type": "input_module",
+  "tier": "unofficial",
+  "maturity": "experimental",
+  "categories": ["qobuz", "streaming", "connect"],
+  "delivery": "independent",
+  "releases": [
+    {
+      "version": "5.0.1",
+      "channel": "stable",
+      "published_at": "2026-09-28T12:11:51Z",
+      "source_tag": "kalinka-plugin-qobuz-v5.0.1",
+      "source_commit": "c8fe6ec795c784598f4e9dafd4ee47ca47d060a2",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/tag/kalinka-plugin-qobuz-v5.0.1",
+      "requires": {
+        "server": ">=5.2,<6",
+        "sdk": ">=3.4,<4",
+        "python": ">=3.10",
+        "platforms": ["linux"],
+        "architectures": ["all"],
+        "capabilities": [],
+        "notes": [
+          "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+          "The package is architecture-independent but requires a compatible Debian-packaged Kalinka server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+          "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
+          "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-qobuz_5.0.1_all.deb",
+          "platform": "linux",
+          "architectures": ["all"],
+          "package": {"name": "kalinka-plugin-qobuz", "version": "5.0.1", "architecture": "all"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/download/kalinka-plugin-qobuz-v5.0.1/kalinka-plugin-qobuz_5.0.1_all.deb",
+          "sha256": "3055fe2dddabed103708eb534b0d6733c94191581e52099d0ebf80a4ad7b4916",
+          "size_bytes": 94622
+        }
+      ]
+    }
+  ]
+}

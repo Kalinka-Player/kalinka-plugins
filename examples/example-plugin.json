@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "example-radio",
+  "name": "Example Radio",
+  "description": "Synthetic schema example. Not a real plugin or an installable release.",
+  "distribution": "kalinka-plugin-example-radio",
+  "entry_point": "kalinka_plugin_example_radio",
+  "creator": {"name": "Example Author", "url": "https://example.invalid/author"},
+  "maintainers": [{"name": "Example Author", "url": "https://example.invalid/author"}],
+  "license": "MIT",
+  "source": {"repository": "https://example.invalid/example-radio", "subdirectory": ""},
+  "tier": "unofficial",
+  "maturity": "experimental",
+  "type": "input_module",
+  "categories": ["radio"],
+  "delivery": "independent",
+  "releases": [
+    {
+      "version": "1.2.0",
+      "channel": "stable",
+      "published_at": "2026-10-01T00:00:00Z",
+      "source_tag": "v1.2.0",
+      "source_commit": "1111111111111111111111111111111111111111",
+      "release_notes": "https://example.invalid/example-radio/releases/v1.2.0",
+      "requires": {
+        "server": ">=5.0,<6",
+        "sdk": ">=3.6,<4",
+        "python": ">=3.11",
+        "platforms": ["all"],
+        "architectures": ["all"],
+        "capabilities": [],
+        "notes": ["Example requirements only; no platform support has been tested."]
+      },
+      "data_rollback": "compatible",
+      "rollback_versions": ">=1.1,<1.2",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "wheel",
+          "filename": "kalinka_plugin_example_radio-1.2.0-py3-none-any.whl",
+          "platform": "all",
+          "architectures": ["all"],
+          "url": "https://example.invalid/example-radio/releases/download/v1.2.0/kalinka_plugin_example_radio-1.2.0-py3-none-any.whl",
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+          "size_bytes": 1234
+        }
+      ]
+    }
+  ]
+}
