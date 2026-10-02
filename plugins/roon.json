@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "roon",
+  "name": "Roon Bridge",
+  "description": "Run the official Roon Bridge on the Kalinka Player server and display track information, artwork, and playback progress. Roon sends audio directly to the local DAC. Requires Linux, a Roon Server and subscription, Node.js 18+, Python 3.11+, and a Kalinka Player server with the external playback API and SDK >=3.7,<4. The proprietary Bridge is downloaded on enable. This independent integration is not Roon Ready certified or endorsed by Roon Labs.",
+  "distribution": "kalinka-plugin-roon",
+  "entry_point": "kalinka_plugin_roon",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/kalinka-plugin-roon", "subdirectory": ""},
+  "type": "input_module",
+  "tier": "unofficial",
+  "maturity": "experimental",
+  "categories": ["roon", "streaming", "network-audio"],
+  "delivery": "independent",
+  "releases": []
+}
