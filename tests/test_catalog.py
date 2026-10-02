@@ -37,7 +37,7 @@ class CatalogTests(unittest.TestCase):
     def test_seed_catalog_has_no_fake_releases_or_example(self):
         catalog = build_catalog()
         self.assertEqual({entry["id"] for entry in catalog["plugins"]}, {
-            "dummydevice", "jamendo", "localfiles", "musiccast", "upnp", "spotify", "qobuz",
+            "dummydevice", "jamendo", "localfiles", "musiccast", "upnp", "spotify", "qobuz", "roon",
         })
         self.assertTrue(all(entry["releases"] == [] for entry in catalog["plugins"]
                             if entry["delivery"] == "bundle"))
@@ -79,6 +79,7 @@ class CatalogTests(unittest.TestCase):
             "dummydevice": "output_device",
             "spotify": "input_module",
             "qobuz": "input_module",
+            "roon": "input_module",
         })
 
     def test_spotify_and_qobuz_are_unofficial_independent_inputs(self):
