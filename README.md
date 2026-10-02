@@ -2,7 +2,7 @@
 
 The curated plugin catalog for [Kalinka](https://github.com/Kalinka-Player/KalinkaPlayer). Discover input sources and optional amplifier or AVR controls, with creator, source, license, plugin type, and hardware-support metadata.
 
-This initial hub contains seven registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka; Spotify and Qobuz have independent source repositories and native release records with exact download URLs and checksums.
+This initial hub contains eight registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka; Spotify and Qobuz have independent source repositories and native release records with exact download URLs and checksums. Roon Bridge is registered with source metadata and awaits its first published release.
 
 ## Official
 
@@ -27,8 +27,11 @@ These three plugins are bundled with Kalinka and update with the server; being b
 | --- | --- | --- | --- |
 | [Spotify Connect](plugins/spotify.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-spotify) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases) | Linux, Python 3.11+, server ≥5.3.0 and <6.0.0, renderer ≥0.5.0 and <1.0.0, SDK ≥3.5 and <4, Spotify Premium, and patched librespot. |
 | [Qobuz](plugins/qobuz.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-qobuz) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases) | Active Qobuz subscription; current version 5 documentation requires server ≥5.2 and SDK ≥3.4 and <4. |
+| [Roon Bridge](plugins/roon.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-roon) · No published release yet | Linux x86-64, ARM64 or ARMv7hf; Python 3.11+, Node.js 18+, SDK ≥3.7 and <4 with a Kalinka Player server implementing the external playback API; Roon Server and subscription. |
 
-Both integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
+All three integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
+
+Roon Bridge downloads Roon Labs' proprietary audio engine when enabled; audio plays on the Kalinka Player server's local DAC and bypasses the Kalinka Player renderer. The plugin displays metadata, artwork and progress. It does not provide hardware volume control or guarantee seamless switching between audio sources. Its `releases` list is empty until a versioned upstream release and its artifacts can be reviewed; CI artifacts are not catalog releases.
 
 Initial release records are Spotify **0.2.0** and Qobuz **5.0.1**. Spotify supplies Linux DEB/RPM packages for x86-64 and ARM64; Qobuz supplies an architecture-independent DEB. Downloaded bytes were checked against their release checksums and GitHub asset digests, and native package headers were inspected without installation. See [verification evidence](docs/initial-release-verification.md).
 
@@ -36,7 +39,7 @@ Managed Linux delivery is **native-package-first**. The initial curated distro a
 
 ## Experimental
 
-[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify and Qobuz above are also experimental, while retaining their unofficial publisher tier.
+[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify, Qobuz and Roon Bridge above are also experimental, while retaining their unofficial publisher tier.
 
 `tier` describes maintenance authority; `maturity` describes readiness. They are independent. Plugin type is separately declared as `input_module` or `output_device`, matching the SDK.
 
