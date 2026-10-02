@@ -18,7 +18,7 @@
     "notes": [
       "Requires a Yamaha MusicCast device exposing the Yamaha Extended Control API on the local network.",
       "Family-level coverage only; this catalog does not yet contain a verified exact-model list. Check the device's protocol support and configured zone and input.",
-      "Provides volume read/set, power on/standby, and readiness for Kalinka's configured input. Input switching targets that configured input; mute is not exposed."
+      "Provides volume read/set, power on/standby, and readiness for Kalinka Player's configured input. Input switching targets that configured input; mute is not exposed."
     ]
   },
   "categories": ["yamaha", "network-control"],

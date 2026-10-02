@@ -1,8 +1,8 @@
-# Kalinka Plugin Hub
+# Kalinka Player Plugin Hub
 
-The curated plugin catalog for [Kalinka](https://github.com/Kalinka-Player/KalinkaPlayer). Discover input sources and optional amplifier or AVR controls, with creator, source, license, plugin type, and hardware-support metadata.
+The curated plugin catalog for [Kalinka Player](https://github.com/Kalinka-Player/KalinkaPlayer). Discover input sources and optional amplifier or AVR controls, with creator, source, license, plugin type, and hardware-support metadata.
 
-This initial hub contains seven registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka; Spotify and Qobuz have independent source repositories and native release records with exact download URLs and checksums.
+This initial hub contains seven registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify and Qobuz have independent source repositories and native release records with exact download URLs and checksums.
 
 ## Official
 
@@ -11,7 +11,7 @@ This initial hub contains seven registered plugins, a JSON schema, an offline va
 | [Local Files](plugins/localfiles.json) | Input source | Local music files, metadata, and semantic search. |
 | [Jamendo](plugins/jamendo.json) | Input source | Browse and play independent music from Jamendo. |
 
-Local Files and Jamendo are the only official plugins in this catalog. Both are included in the Kalinka server bundle, not independently updatable through this catalog.
+Local Files and Jamendo are the only official plugins in this catalog. Both are included in the Kalinka Player server bundle, not independently updatable through this catalog.
 
 ## Unofficial
 
@@ -21,7 +21,7 @@ Local Files and Jamendo are the only official plugins in this catalog. Both are 
 | [MusicCast](plugins/musiccast.json) | Device control | Yamaha MusicCast volume, power, and configured-input control. |
 | [Dummy Device](plugins/dummydevice.json) | Device control | Experimental simulated output device for development and testing. |
 
-These three plugins are bundled with Kalinka and update with the server; being bundled does not make a plugin official. MusicCast declares its MusicCast / Yamaha Extended Control family and readable limitations; a verified exact-model list is not yet available.
+These three plugins are bundled with Kalinka Player and update with the server; being bundled does not make a plugin official. MusicCast declares its MusicCast / Yamaha Extended Control family and readable limitations; a verified exact-model list is not yet available.
 
 | Plugin | Type | Source and existing releases | Requirements |
 | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ Managed Linux delivery is **native-package-first**. The initial curated distro a
 ## Catalog contract
 
 - One reviewed document per plugin in [`plugins/`](plugins), validated by [`schemas/plugin.schema.json`](schemas/plugin.schema.json).
-- Required `type` is copied from the plugin's `PLUGIN_TYPE.value`. Curators verify it; browsing never imports plugin code. After installation, Kalinka's detected type remains authoritative.
+- Required `type` is copied from the plugin's `PLUGIN_TYPE.value`. Curators verify it; browsing never imports plugin code. After installation, Kalinka Player's detected type remains authoritative.
 - Output devices require `device_support.models`, `families`, and `notes`. At least one model or family must be named, with readable prerequisites and limitations. These names support future search; a family match is not exact-model verification.
 - `categories` contains descriptive search tags, not an alternative type declaration. `delivery` distinguishes bundle-owned and independent packages.
 - Releases require server/SDK/Python requirements, OS and architecture declarations, versioned artifact URLs, sizes and SHA-256 hashes. Native artifacts additionally declare exact package identity and distro/version targets.
@@ -65,7 +65,7 @@ python3 -m venv .venv
 
 The builder checks metadata, identity uniqueness, version ranges, artifact identities, OS/architecture consistency, distro allowlists and URL structure. A tested reference target filter demonstrates fail-closed selection; it is not the runtime installer. The builder produces deterministic **unsigned** JSON without downloading, installing or importing plugins. CI repeats the tests and builds a catalog using the source commit as its revision.
 
-The result contains `schema_version: 1`, `catalog_id: "kalinka"`, `revision`, and `plugins`. A revision is an audit reference, not a signature. Neither a local build nor a raw GitHub JSON file authorizes installation. Signed publication, artifact inspection, installer recovery and app integration remain separate work. No automatic-update authorization is enabled by this feed.
+The result contains `schema_version: 1`, `catalog_id: "kalinka"`, `revision`, and `plugins`. A revision is an audit reference, not a signature. Neither a local build nor a raw GitHub JSON file authorizes installation. The server and app support opt-in read-only browsing with metadata-only compatibility checks. Signed publication, full artifact/payload inspection, installation and recovery remain separate work. No automatic-update authorization is enabled by this feed.
 
 ## Public browsing feed
 
@@ -82,4 +82,4 @@ Set `KALINKA_PLUGIN_CATALOG_BASE_URL` on the server to change its serving locati
 
 ## License
 
-The hub's code and documentation are [GPL-3.0-or-later](LICENSE), derived from the KalinkaPlayer catalog scaffold. Each plugin keeps its own license, recorded in its metadata; listing it does not relicense its source or artifacts.
+The hub's code and documentation are [GPL-3.0-or-later](LICENSE), derived from the Kalinka Player catalog scaffold. Each plugin keeps its own license, recorded in its metadata; listing it does not relicense its source or artifacts.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:kalinka:plugin-schema:1",
-  "title": "Kalinka plugin catalog entry",
+  "title": "Kalinka Player plugin catalog entry",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "id", "name", "description", "distribution", "entry_point", "creator", "maintainers", "license", "source", "type", "tier", "maturity", "categories", "delivery", "releases"],

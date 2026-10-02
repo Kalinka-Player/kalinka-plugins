@@ -13,7 +13,7 @@ An upstream checksum agreement is not independent publisher authentication. Prod
 ## Requirements evidence
 
 - [Spotify's source](https://github.com/Kalinka-Player/kalinka-plugin-spotify/tree/348cd564cb0a4f82dce00f492691eee23033a0b4) declares Python ≥3.11 and SDK ≥3.5,<4; native package headers confirm SDK/Python dependencies. Source documentation identifies patched librespot and Spotify Premium requirements.
-- Spotify requires prebuilt Kalinka server 5.3.0 or newer (below 6.0.0) and renderer 0.5.0 or newer (below 1.0.0). Upgrading only the SDK is insufficient. The catalog conservatively caps server/renderer at the next major version until reviewed.
+- Spotify requires prebuilt Kalinka Player server 5.3.0 or newer (below 6.0.0) and renderer 0.5.0 or newer (below 1.0.0). Upgrading only the SDK is insufficient. The catalog conservatively caps server/renderer at the next major version until reviewed.
 - [Qobuz's source](https://github.com/Kalinka-Player/kalinka-plugin-qobuz/tree/c8fe6ec795c784598f4e9dafd4ee47ca47d060a2) declares Python ≥3.10 and SDK ≥3.4,<4. Its README requires server ≥5.2 for plugin v5 and an active subscription. The catalog conservatively caps the server at the next major version.
 - Spotify's documented distro support includes Debian 13, Ubuntu 24.04 and Fedora 44. Qobuz describes compatible Debian/Ubuntu servers more broadly. The hub starts with those explicit distro versions only (no Qobuz RPM). These allowlists are stricter than some upstream claims, not evidence of additional testing. Expand through review as targets are confirmed.
 

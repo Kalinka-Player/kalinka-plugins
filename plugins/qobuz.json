@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "qobuz",
   "name": "Qobuz",
-  "description": "Unofficial Qobuz browsing, playback, and Qobuz Connect input for Kalinka. Requires an active Qobuz subscription. Not affiliated with or endorsed by Qobuz.",
+  "description": "Unofficial Qobuz browsing, playback, and Qobuz Connect input for Kalinka Player. Requires an active Qobuz subscription. Not affiliated with or endorsed by Qobuz.",
   "distribution": "kalinka-plugin-qobuz",
   "entry_point": "kalinka_plugin_qobuz",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
@@ -31,7 +31,7 @@
         "capabilities": [],
         "notes": [
           "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
-          "The package is architecture-independent but requires a compatible Debian-packaged Kalinka server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+          "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
           "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
           "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
         ]

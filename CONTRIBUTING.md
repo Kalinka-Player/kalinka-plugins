@@ -1,6 +1,8 @@
 # Contributing a plugin
 
-Create `plugins/<id>.json` following the schema. Keep the Kalinka `PLUGIN_ID`, distribution name, and `kalinka.plugins` entry-point name distinct and accurate. Supply the original creator, current maintainers, a description, license, and source location. Do not include private contact details or credentials. The plugin's own license continues to govern its artifacts.
+Create `plugins/<id>.json` following the schema. Keep the Kalinka Player `PLUGIN_ID`, distribution name, and `kalinka.plugins` entry-point name distinct and accurate. Supply the original creator, current maintainers, a description, license, and source location. Do not include private contact details or credentials. The plugin's own license continues to govern its artifacts.
+
+Use the full product name **Kalinka Player** in user-facing descriptions, requirements, hardware-support notes, and documentation. Keep technical identifiers, package names, catalog IDs, and URLs unchanged.
 
 Catalog maintainers verify repository ownership, reserve identities, and assign `official` or `unofficial`. New community entries should propose `unofficial`; experimental quality is an independent maturity value. Changes to ownership, identity, or trust tier require maintainer review. Do not silently retarget an abandoned plugin to a new publisher.
 

@@ -53,6 +53,18 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(published, build_catalog(revision=published["revision"]))
         self.assertEqual(published["catalog_id"], "kalinka")
 
+    def test_catalog_display_text_uses_full_product_name(self):
+        for plugin in build_catalog()["plugins"]:
+            support = plugin.get("device_support", {})
+            display_text = [plugin["name"], plugin["description"]]
+            for field in ("models", "families", "notes"):
+                display_text.extend(support.get(field, []))
+            for release in plugin["releases"]:
+                display_text.extend(release["requires"].get("notes", []))
+            with self.subTest(plugin=plugin["id"]):
+                for text in display_text:
+                    self.assertNotRegex(text, r"\bKalinka\b(?! Player\b)")
+
     def test_only_jamendo_and_localfiles_are_official(self):
         plugins = build_catalog()["plugins"]
         official = {"jamendo", "localfiles"}
@@ -191,7 +203,7 @@ class CatalogTests(unittest.TestCase):
                    if p["type"] == "output_device"}
         self.assertEqual(devices["musiccast"]["models"], [])
         self.assertEqual(devices["musiccast"]["families"], ["Yamaha MusicCast / Yamaha Extended Control"])
-        self.assertEqual(devices["dummydevice"]["families"], ["Kalinka simulated devices"])
+        self.assertEqual(devices["dummydevice"]["families"], ["Kalinka Player simulated devices"])
 
     def test_artifact_target_must_be_in_required_platforms(self):
         self.rename_wheel("kalinka_plugin_example_radio-1.2.0-cp311-cp311-win_amd64.whl")

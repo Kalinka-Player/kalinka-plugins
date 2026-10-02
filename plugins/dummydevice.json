@@ -14,7 +14,7 @@
   "type": "output_device",
   "device_support": {
     "models": [],
-    "families": ["Kalinka simulated devices"],
+    "families": ["Kalinka Player simulated devices"],
     "notes": ["Development and testing only. This plugin simulates an output device and does not control a physical amplifier or AVR."]
   },
   "categories": ["development"],

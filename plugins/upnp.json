@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "upnp",
   "name": "UPnP",
-  "description": "Expose Kalinka as a UPnP MediaRenderer so network control apps can play through the selected Kalinka output.",
+  "description": "Expose Kalinka Player as a UPnP MediaRenderer so network control apps can play through the selected Kalinka Player output.",
   "distribution": "kalinka-plugin-upnp",
   "entry_point": "kalinka_plugin_upnp",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
