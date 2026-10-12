@@ -271,6 +271,68 @@
               "architectures": [
                 "all"
               ],
+              "filename": "kalinka-plugin-roon_0.2.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-roon",
+                "version": "0.2.0"
+              },
+              "platform": "linux",
+              "sha256": "080d9460fb647a60d5b5d344cb666085469d0a522e38db6c1f73aee9bd0a3a90",
+              "size_bytes": 463480,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-roon/releases/download/kalinka-plugin-roon-v0.2.0/kalinka-plugin-roon_0.2.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-12T22:26:44Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-roon/releases/tag/kalinka-plugin-roon-v0.2.0",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64",
+              "armv7l"
+            ],
+            "capabilities": [],
+            "notes": [
+              "A Roon Server and a Roon subscription are required. Enabling the plugin downloads Roon Labs' proprietary Roon Bridge for this machine, or attaches to the audio endpoint of a Roon Server already running on it; this integration is not Roon Ready certified or endorsed by Roon Labs.",
+              "Requires Kalinka Player server 5.6.0 or newer (below 6.0.0), which brings SDK 3.7 and the external playback API. The package depends on Node.js 18 or newer, which apt installs with it.",
+              "Roon plays straight to the server's local DAC and bypasses the Kalinka Player renderer; Kalinka Player shows what plays and keeps Roon's session across pause. The Kalinka Player volume slider controls the Roon output only on a server with external-volume support (plugin SDK 3.11 or newer); released servers up to 5.8.0 ship older SDKs and keep playback without Roon volume.",
+              "Initial distro allowlist is conservative: Debian 13 and Ubuntu 24.04. Derivatives must match an explicitly listed OS identity."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.7,<4",
+            "server": ">=5.6,<6"
+          },
+          "source_commit": "1f81aa518c1efd52336d44c1dbeb55688e547aee",
+          "source_tag": "kalinka-plugin-roon-v0.2.0",
+          "version": "0.2.0",
+          "withdrawn": false
+        },
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
               "filename": "kalinka-plugin-roon_0.1.1_all.deb",
               "format": "deb",
               "package": {
@@ -680,6 +742,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "18d366a875fd7afccc81acf32859e6f1c03d9011",
+  "revision": "b28ecea5756c955caf68f79d07f650df18a49048",
   "schema_version": 1
 }
