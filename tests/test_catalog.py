@@ -108,8 +108,9 @@ class CatalogTests(unittest.TestCase):
                     "repository": f"https://github.com/Kalinka-Player/kalinka-plugin-{plugin_id}",
                     "subdirectory": "",
                 })
-                self.assertEqual(len(plugin["releases"]), 1)
-                self.assertEqual(plugin["releases"][0]["data_rollback"], "manual")
+                self.assertGreaterEqual(len(plugin["releases"]), 1)
+                for release in plugin["releases"]:
+                    self.assertEqual(release["data_rollback"], "manual")
 
     def test_plugin_type_is_required_even_with_category_tags(self):
         del self.plugin["type"]

@@ -16,6 +16,76 @@
   "delivery": "independent",
   "releases": [
     {
+      "version": "0.2.2",
+      "channel": "stable",
+      "published_at": "2026-10-06T21:26:06Z",
+      "source_tag": "kalinka-plugin-spotify-v0.2.2",
+      "source_commit": "303d59746f3f366f2e4a592533a3c07246c02cd5",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/tag/kalinka-plugin-spotify-v0.2.2",
+      "requires": {
+        "server": ">=5.3,<6",
+        "sdk": ">=3.5,<4",
+        "python": ">=3.11",
+        "renderer": ">=0.5,<1",
+        "platforms": ["linux"],
+        "architectures": ["x86_64", "aarch64"],
+        "capabilities": [],
+        "notes": [
+          "Spotify Premium is required. The packages include Kalinka Player's patched librespot executable.",
+          "Requires Kalinka Player server 5.3.0 or newer (below 6.0.0) and renderer 0.5.0 or newer (below 1.0.0). Updating only the SDK is insufficient.",
+          "Initial distro allowlist is conservative: Debian 13, Ubuntu 24.04 and Fedora 44. Derivatives must match an explicitly listed OS identity; a 64-bit CPU with a 32-bit userspace does not qualify."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-spotify_0.2.2_amd64.deb",
+          "platform": "linux",
+          "architectures": ["x86_64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0.2.2", "architecture": "amd64"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.2/kalinka-plugin-spotify_0.2.2_amd64.deb",
+          "sha256": "b873429ddf95e37d6131d43f5ae35ce03c083d01cf190db9b2d4dde9694ae7db",
+          "size_bytes": 4082668
+        },
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-spotify_0.2.2_arm64.deb",
+          "platform": "linux",
+          "architectures": ["aarch64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0.2.2", "architecture": "arm64"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.2/kalinka-plugin-spotify_0.2.2_arm64.deb",
+          "sha256": "deee0b2e89971927e08e9ccda52ea3dec2406c68ed9749b3cc96b5d40d113875",
+          "size_bytes": 3660440
+        },
+        {
+          "format": "rpm",
+          "filename": "kalinka-plugin-spotify-0.2.2-1.fc44.x86_64.rpm",
+          "platform": "linux",
+          "architectures": ["x86_64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0:0.2.2-1.fc44", "architecture": "x86_64"},
+          "targets": [{"id": "fedora", "versions": ["44"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.2/kalinka-plugin-spotify-0.2.2-1.fc44.x86_64.rpm",
+          "sha256": "05496e8a1208e156991f451df19f171f4fb8fd9f4c2009b5340a056499b59ac7",
+          "size_bytes": 4455202
+        },
+        {
+          "format": "rpm",
+          "filename": "kalinka-plugin-spotify-0.2.2-1.fc44.aarch64.rpm",
+          "platform": "linux",
+          "architectures": ["aarch64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0:0.2.2-1.fc44", "architecture": "aarch64"},
+          "targets": [{"id": "fedora", "versions": ["44"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.2.2/kalinka-plugin-spotify-0.2.2-1.fc44.aarch64.rpm",
+          "sha256": "5f3877923e25fdd4e0c1dc8dccc8b997e055b44b499664aec7f0dc83d4228b09",
+          "size_bytes": 4236737
+        }
+      ]
+    },
+    {
       "version": "0.2.0",
       "channel": "stable",
       "published_at": "2026-09-29T18:37:14Z",
