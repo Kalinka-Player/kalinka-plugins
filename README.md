@@ -2,7 +2,7 @@
 
 The curated plugin catalog for [Kalinka Player](https://github.com/Kalinka-Player/KalinkaPlayer). Discover input sources and optional amplifier or AVR controls, with creator, source, license, plugin type, and hardware-support metadata.
 
-This initial hub contains eight registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify and Qobuz have independent source repositories and native release records with exact download URLs and checksums. Roon Bridge is registered with source metadata and awaits its first published release.
+This initial hub contains eight registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify, Qobuz and Roon Bridge have independent source repositories and native release records with exact download URLs and checksums.
 >>>>>>> 7680082 (Register Roon Bridge in the plugin catalog)
 
 ## Official
@@ -28,11 +28,11 @@ These three plugins are bundled with Kalinka Player and update with the server; 
 | --- | --- | --- | --- |
 | [Spotify Connect](plugins/spotify.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-spotify) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases) | Linux, Python 3.11+, server ≥5.3.0 and <6.0.0, renderer ≥0.5.0 and <1.0.0, SDK ≥3.5 and <4, Spotify Premium, and patched librespot. |
 | [Qobuz](plugins/qobuz.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-qobuz) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases) | Active Qobuz subscription; current version 5 documentation requires server ≥5.2 and SDK ≥3.4 and <4. |
-| [Roon Bridge](plugins/roon.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-roon) · No published release yet | Linux x86-64, ARM64 or ARMv7hf; Python 3.11+, Node.js 18+, SDK ≥3.7 and <4 with a Kalinka Player server implementing the external playback API; Roon Server and subscription. |
+| [Roon Bridge](plugins/roon.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-roon) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-roon/releases) | Linux x86-64, ARM64 or ARMv7hf; Python 3.11+, Node.js 18+, SDK ≥3.7 and <4 with a Kalinka Player server implementing the external playback API; Roon Server and subscription. |
 
 All three integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
 
-Roon Bridge downloads Roon Labs' proprietary audio engine when enabled; audio plays on the Kalinka Player server's local DAC and bypasses the Kalinka Player renderer. The plugin displays metadata, artwork and progress. It does not provide hardware volume control or guarantee seamless switching between audio sources. Its `releases` list is empty until a versioned upstream release and its artifacts can be reviewed; CI artifacts are not catalog releases.
+Roon Bridge downloads Roon Labs' proprietary audio engine when enabled; audio plays on the Kalinka Player server's local DAC and bypasses the Kalinka Player renderer. The plugin displays metadata, artwork and progress. It does not provide hardware volume control or guarantee seamless switching between audio sources.
 
 Initial release records are Spotify **0.2.0** and Qobuz **5.0.1**. Spotify supplies Linux DEB/RPM packages for x86-64 and ARM64; Qobuz supplies an architecture-independent DEB. Downloaded bytes were checked against their release checksums and GitHub asset digests, and native package headers were inspected without installation. See [verification evidence](docs/initial-release-verification.md).
 
@@ -54,7 +54,7 @@ Managed Linux delivery is **native-package-first**. The initial curated distro a
 - `requires.architectures` limits the release; each artifact also declares `architectures`. Both must match the **server's userspace**, not the app device or merely the CPU. `all` is allowed only by itself and never bypasses the other requirements.
 - `deb` and `rpm` are Linux-only. `wheel` remains a schema option for portable/development deployments; no wheel adapter or release is enabled here. `platform: all` and `architectures: ["all"]` are separate claims.
 
-See [contributing](CONTRIBUTING.md), [architecture and scope](docs/architecture.md), and the real [Spotify](plugins/spotify.json)/[Qobuz](plugins/qobuz.json) native-release records. The [portable-wheel example](examples/example-plugin.json) and [device-support example](examples/example-device-plugin.json) are synthetic and excluded from the built catalog.
+See [contributing](CONTRIBUTING.md), [architecture and scope](docs/architecture.md), and the real [Spotify](plugins/spotify.json)/[Qobuz](plugins/qobuz.json)/[Roon Bridge](plugins/roon.json) native-release records. The [portable-wheel example](examples/example-plugin.json) and [device-support example](examples/example-device-plugin.json) are synthetic and excluded from the built catalog.
 
 ## Validate and build
 

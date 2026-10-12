@@ -42,7 +42,7 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue(all(entry["releases"] == [] for entry in catalog["plugins"]
                             if entry["delivery"] == "bundle"))
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["releases"]},
-                         {"spotify", "qobuz"})
+                         {"spotify", "qobuz", "roon"})
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["delivery"] == "bundle"}, {
             "dummydevice", "jamendo", "localfiles", "musiccast", "upnp",
         })
