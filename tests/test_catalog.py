@@ -38,11 +38,12 @@ class CatalogTests(unittest.TestCase):
         catalog = build_catalog()
         self.assertEqual({entry["id"] for entry in catalog["plugins"]}, {
             "dummydevice", "jamendo", "localfiles", "musiccast", "upnp", "spotify", "qobuz", "roon",
+            "airplay",
         })
         self.assertTrue(all(entry["releases"] == [] for entry in catalog["plugins"]
                             if entry["delivery"] == "bundle"))
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["releases"]},
-                         {"spotify", "qobuz", "roon"})
+                         {"spotify", "qobuz", "roon", "airplay"})
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["delivery"] == "bundle"}, {
             "dummydevice", "jamendo", "localfiles", "musiccast", "upnp",
         })
@@ -92,6 +93,7 @@ class CatalogTests(unittest.TestCase):
             "spotify": "input_module",
             "qobuz": "input_module",
             "roon": "input_module",
+            "airplay": "input_module",
         })
 
     def test_spotify_and_qobuz_are_unofficial_independent_inputs(self):

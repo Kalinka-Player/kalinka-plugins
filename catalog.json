@@ -3,6 +3,216 @@
   "plugins": [
     {
       "categories": [
+        "airplay",
+        "streaming",
+        "apple"
+      ],
+      "creator": {
+        "name": "Dmitry Savin",
+        "url": "https://github.com/madenvel"
+      },
+      "delivery": "independent",
+      "description": "Play from an iPhone, iPad or Mac to Kalinka Player over AirPlay. Unofficial AirPlay 2 and classic AirPlay receiver; not affiliated with or endorsed by Apple.",
+      "distribution": "kalinka-plugin-airplay",
+      "entry_point": "kalinka_plugin_airplay",
+      "id": "airplay",
+      "license": "GPL-3.0-or-later",
+      "maintainers": [
+        {
+          "name": "Kalinka Player",
+          "url": "https://github.com/Kalinka-Player"
+        }
+      ],
+      "maturity": "experimental",
+      "name": "AirPlay",
+      "releases": [
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "x86_64"
+              ],
+              "filename": "kalinka-plugin-airplay_0.1.0+bookworm_amd64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "amd64",
+                "name": "kalinka-plugin-airplay",
+                "version": "0.1.0+bookworm"
+              },
+              "platform": "linux",
+              "sha256": "34262a672440a4b2108dc553a5d4f5c1c209c2fab6f1fb3dc76468383a21af0f",
+              "size_bytes": 881244,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "12"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.1.0/kalinka-plugin-airplay_0.1.0%2Bbookworm_amd64.deb"
+            },
+            {
+              "architectures": [
+                "aarch64"
+              ],
+              "filename": "kalinka-plugin-airplay_0.1.0+bookworm_arm64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "arm64",
+                "name": "kalinka-plugin-airplay",
+                "version": "0.1.0+bookworm"
+              },
+              "platform": "linux",
+              "sha256": "9a45b1748f1432d08e177912202628ff55f57c048868f2b73f536b9a5cca12b4",
+              "size_bytes": 862044,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "12"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.1.0/kalinka-plugin-airplay_0.1.0%2Bbookworm_arm64.deb"
+            },
+            {
+              "architectures": [
+                "x86_64"
+              ],
+              "filename": "kalinka-plugin-airplay_0.1.0+noble_amd64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "amd64",
+                "name": "kalinka-plugin-airplay",
+                "version": "0.1.0+noble"
+              },
+              "platform": "linux",
+              "sha256": "ac239d8e817fbe725f4e2d6b1b0994638bc77963d3cb352328d859af5bb665b5",
+              "size_bytes": 889552,
+              "targets": [
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.1.0/kalinka-plugin-airplay_0.1.0%2Bnoble_amd64.deb"
+            },
+            {
+              "architectures": [
+                "aarch64"
+              ],
+              "filename": "kalinka-plugin-airplay_0.1.0+noble_arm64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "arm64",
+                "name": "kalinka-plugin-airplay",
+                "version": "0.1.0+noble"
+              },
+              "platform": "linux",
+              "sha256": "ffcbb9b63914282913dc63c896c35a31f710881e71b33d4649ee6eaad5cf5a45",
+              "size_bytes": 870196,
+              "targets": [
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.1.0/kalinka-plugin-airplay_0.1.0%2Bnoble_arm64.deb"
+            },
+            {
+              "architectures": [
+                "x86_64"
+              ],
+              "filename": "kalinka-plugin-airplay_0.1.0+trixie_amd64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "amd64",
+                "name": "kalinka-plugin-airplay",
+                "version": "0.1.0+trixie"
+              },
+              "platform": "linux",
+              "sha256": "2837936e4b941a966360d0b0dd93d11dd65d4c3181b36c53795048963ad3863f",
+              "size_bytes": 885020,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.1.0/kalinka-plugin-airplay_0.1.0%2Btrixie_amd64.deb"
+            },
+            {
+              "architectures": [
+                "aarch64"
+              ],
+              "filename": "kalinka-plugin-airplay_0.1.0+trixie_arm64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "arm64",
+                "name": "kalinka-plugin-airplay",
+                "version": "0.1.0+trixie"
+              },
+              "platform": "linux",
+              "sha256": "18db0b0514106cefac41f9b35b69f632933901182ed76deb8a2f3dbcd152aeb8",
+              "size_bytes": 865968,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.1.0/kalinka-plugin-airplay_0.1.0%2Btrixie_arm64.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-12T23:36:53Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/tag/kalinka-plugin-airplay-v0.1.0",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.9.0 or newer (below 6.0.0), which brings plugin SDK 3.11, and a Kalinka Player renderer 0.5.0 or newer (below 1.0.0) with live stream support. The audio plays through the renderer selected in Kalinka Player, on this or another machine; the server itself opens no audio hardware.",
+              "Each package bundles shairport-sync 5.5.2 with AirPlay 2 and nqptp 1.2.8, built against one distribution release, and installs only on that release: Debian 12 or 13, including 64-bit Raspberry Pi OS and DietPi based on them, or Ubuntu 24.04, on amd64 or arm64. A 32-bit userspace does not qualify.",
+              "AirPlay 2 needs UDP ports 319 and 320 for nqptp; the package grants the server CAP_NET_BIND_SERVICE for it. Keep a distribution shairport-sync or nqptp service disabled. When the ports are taken, classic AirPlay is offered instead. A firewall must allow UDP 5353, TCP 7000, UDP 319-320 and 6000-6009, and the ephemeral range 32768-60999 over TCP and UDP.",
+              "This independent integration is not certified or endorsed by Apple. Remote control from Kalinka Player (pause, play, next, previous) reaches classic AirPlay senders only; AirPlay 2 senders are controlled from the sending device."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "renderer": ">=0.5,<1",
+            "sdk": ">=3.11,<4",
+            "server": ">=5.9,<6"
+          },
+          "source_commit": "29db4807b2dc28d5d06ba42b553b121da4bfd78b",
+          "source_tag": "kalinka-plugin-airplay-v0.1.0",
+          "version": "0.1.0",
+          "withdrawn": false
+        }
+      ],
+      "schema_version": 1,
+      "source": {
+        "repository": "https://github.com/Kalinka-Player/kalinka-plugin-airplay",
+        "subdirectory": ""
+      },
+      "tier": "unofficial",
+      "type": "input_module"
+    },
+    {
+      "categories": [
         "development"
       ],
       "creator": {
@@ -742,6 +952,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "b28ecea5756c955caf68f79d07f650df18a49048",
+  "revision": "94d65b5b58a724f5e19e5e0e7a69f4b5deb93024",
   "schema_version": 1
 }

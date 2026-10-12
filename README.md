@@ -2,7 +2,7 @@
 
 The curated plugin catalog for [Kalinka Player](https://github.com/Kalinka-Player/KalinkaPlayer). Discover input sources and optional amplifier or AVR controls, with creator, source, license, plugin type, and hardware-support metadata.
 
-This initial hub contains eight registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify, Qobuz and Roon Bridge have independent source repositories and native release records with exact download URLs and checksums.
+This initial hub contains nine registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify, Qobuz, Roon Bridge and AirPlay have independent source repositories and native release records with exact download URLs and checksums.
 
 ## Official
 
@@ -28,18 +28,21 @@ These three plugins are bundled with Kalinka Player and update with the server; 
 | [Spotify Connect](plugins/spotify.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-spotify) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases) | Linux, Python 3.11+, server ≥5.3.0 and <6.0.0, renderer ≥0.5.0 and <1.0.0, SDK ≥3.5 and <4, Spotify Premium, and patched librespot. |
 | [Qobuz](plugins/qobuz.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-qobuz) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases) | Active Qobuz subscription; current version 5 documentation requires server ≥5.2 and SDK ≥3.4 and <4. |
 | [Roon Bridge](plugins/roon.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-roon) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-roon/releases) | Linux x86-64, ARM64 or ARMv7hf; Python 3.11+, Node.js 18+, SDK ≥3.7 and <4 with a Kalinka Player server implementing the external playback API; Roon Server and subscription. |
+| [AirPlay](plugins/airplay.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-airplay) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases) | Linux x86-64 or ARM64 on Debian 12, Debian 13 or Ubuntu 24.04; Python 3.11+, server ≥5.9.0 and <6.0.0, SDK ≥3.11 and <4, renderer ≥0.5.0 and <1.0.0. Bundles shairport-sync 5.5.2 and nqptp 1.2.8. |
 
-All three integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
+All four integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
 
 Roon Bridge downloads Roon Labs' proprietary audio engine when enabled; audio plays on the Kalinka Player server's local DAC and bypasses the Kalinka Player renderer. The plugin displays metadata, artwork and progress. From 0.2.0 it routes the Kalinka Player volume slider to the Roon output on a server with external-volume support (plugin SDK 3.11 or newer; released servers up to 5.8.0 ship older SDKs and show playback without Roon volume), can attach to a Roon Server's own audio endpoint on the same machine, and keeps Roon's session across pause. It does not guarantee seamless switching between audio sources.
 
+AirPlay makes the Kalinka Player server an AirPlay 2 or classic AirPlay speaker for an iPhone, iPad or Mac, using the bundled shairport-sync and nqptp. The audio plays through the renderer selected in Kalinka Player, which may be on another machine; the server opens no audio hardware. Its binaries link each distribution release's own libraries, so the release carries one package per release and architecture, and Debian 12 is on its allowlist alongside Debian 13 and Ubuntu 24.04. AirPlay is a trademark of Apple Inc.; the integration is not certified or endorsed by Apple.
+
 Initial release records are Spotify **0.2.0** and Qobuz **5.0.1**. Spotify supplies Linux DEB/RPM packages for x86-64 and ARM64; Qobuz supplies an architecture-independent DEB. Downloaded bytes were checked against their release checksums and GitHub asset digests, and native package headers were inspected without installation. See [verification evidence](docs/initial-release-verification.md).
 
-Managed Linux delivery is **native-package-first**. The initial curated distro allowlist is Debian 13 and Ubuntu 24.04 for DEBs, plus Fedora 44 for Spotify RPMs. This intentionally does not imply support for every derivative or future distro version. A Debian `all` package means architecture-independent, **not** cross-platform. Server, SDK, Python, renderer (where declared), dependencies and package ownership must still be compatible. Follow upstream documentation for manual installation; the hub does not yet provide an installer.
+Managed Linux delivery is **native-package-first**. The initial curated distro allowlist is Debian 13 and Ubuntu 24.04 for DEBs, Debian 12 as well for AirPlay's per-release packages, plus Fedora 44 for Spotify RPMs. This intentionally does not imply support for every derivative or future distro version. A Debian `all` package means architecture-independent, **not** cross-platform. Server, SDK, Python, renderer (where declared), dependencies and package ownership must still be compatible. Follow upstream documentation for manual installation; the hub does not yet provide an installer.
 
 ## Experimental
 
-[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify, Qobuz and Roon Bridge above are also experimental, while retaining their unofficial publisher tier.
+[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify, Qobuz, Roon Bridge and AirPlay above are also experimental, while retaining their unofficial publisher tier.
 
 `tier` describes maintenance authority; `maturity` describes readiness. They are independent. Plugin type is separately declared as `input_module` or `output_device`, matching the SDK.
 
