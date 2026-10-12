@@ -3,7 +3,6 @@
 The curated plugin catalog for [Kalinka Player](https://github.com/Kalinka-Player/KalinkaPlayer). Discover input sources and optional amplifier or AVR controls, with creator, source, license, plugin type, and hardware-support metadata.
 
 This initial hub contains eight registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify, Qobuz and Roon Bridge have independent source repositories and native release records with exact download URLs and checksums.
->>>>>>> 7680082 (Register Roon Bridge in the plugin catalog)
 
 ## Official
 
@@ -32,7 +31,7 @@ These three plugins are bundled with Kalinka Player and update with the server; 
 
 All three integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
 
-Roon Bridge downloads Roon Labs' proprietary audio engine when enabled; audio plays on the Kalinka Player server's local DAC and bypasses the Kalinka Player renderer. The plugin displays metadata, artwork and progress. It does not provide hardware volume control or guarantee seamless switching between audio sources.
+Roon Bridge downloads Roon Labs' proprietary audio engine when enabled; audio plays on the Kalinka Player server's local DAC and bypasses the Kalinka Player renderer. The plugin displays metadata, artwork and progress. From 0.2.0 it routes the Kalinka Player volume slider to the Roon output on a server with external-volume support (plugin SDK 3.11 or newer; released servers up to 5.8.0 ship older SDKs and show playback without Roon volume), can attach to a Roon Server's own audio endpoint on the same machine, and keeps Roon's session across pause. It does not guarantee seamless switching between audio sources.
 
 Initial release records are Spotify **0.2.0** and Qobuz **5.0.1**. Spotify supplies Linux DEB/RPM packages for x86-64 and ARM64; Qobuz supplies an architecture-independent DEB. Downloaded bytes were checked against their release checksums and GitHub asset digests, and native package headers were inspected without installation. See [verification evidence](docs/initial-release-verification.md).
 
