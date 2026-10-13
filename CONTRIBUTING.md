@@ -1,6 +1,6 @@
 # Contributing a plugin
 
-Create `plugins/<id>.json` following the schema. Keep the Kalinka Player `PLUGIN_ID`, distribution name, and `kalinka.plugins` entry-point name distinct and accurate. Supply the original creator, current maintainers, a description, license, and source location. Do not include private contact details or credentials. The plugin's own license continues to govern its artifacts.
+Create `plugins/<id>.json` following the schema. Keep the Kalinka Player `PLUGIN_ID`, distribution name, and `kalinka.plugins` entry-point name distinct and accurate. Supply the original creator, current maintainers, a summary, a description, license, and source location. The summary is one sentence for the plugin's tile in the app, where `{player}` stands for the name of the user's Kalinka Player server. The description says in plain words what the plugin does and what account or hardware it needs; version and platform requirements belong in the release notes, not here. Do not include private contact details or credentials. The plugin's own license continues to govern its artifacts.
 
 Use the full product name **Kalinka Player** in user-facing descriptions, requirements, hardware-support notes, and documentation. Keep technical identifiers, package names, catalog IDs, and URLs unchanged.
 

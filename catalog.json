@@ -12,7 +12,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "independent",
-      "description": "Play from an iPhone, iPad or Mac to Kalinka Player over AirPlay. Unofficial AirPlay 2 and classic AirPlay receiver; not affiliated with or endorsed by Apple.",
+      "description": "Turns Kalinka Player into an AirPlay speaker, so an iPhone, iPad or Mac can play to it. Works with AirPlay 2 and classic AirPlay. Not made or endorsed by Apple.",
       "distribution": "kalinka-plugin-airplay",
       "entry_point": "kalinka_plugin_airplay",
       "id": "airplay",
@@ -355,6 +355,7 @@
         "repository": "https://github.com/Kalinka-Player/kalinka-plugin-airplay",
         "subdirectory": ""
       },
+      "summary": "Play from an iPhone, iPad or Mac to {player} over AirPlay.",
       "tier": "unofficial",
       "type": "input_module"
     },
@@ -367,7 +368,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "bundle",
-      "description": "A simulated output device for plugin development and testing.",
+      "description": "A pretend output device that does nothing with the audio. It is for developing and testing plugins without real hardware.",
       "device_support": {
         "families": [
           "Kalinka Player simulated devices"
@@ -395,6 +396,7 @@
         "repository": "https://github.com/Kalinka-Player/KalinkaPlayer",
         "subdirectory": "packages/kalinka-plugin-dummydevice"
       },
+      "summary": "A pretend output device for testing plugins.",
       "tier": "unofficial",
       "type": "output_device"
     },
@@ -407,7 +409,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "bundle",
-      "description": "Browse and play music from Jamendo, with optional mood and semantic search over its catalog.",
+      "description": "Browse and play music from Jamendo, a catalogue of free music published under Creative Commons licences. You can also search it by mood or by describing the music you want.",
       "distribution": "kalinka-plugin-jamendo",
       "entry_point": "kalinka_plugin_jamendo",
       "id": "jamendo",
@@ -426,6 +428,7 @@
         "repository": "https://github.com/Kalinka-Player/KalinkaPlayer",
         "subdirectory": "packages/kalinka-plugin-jamendo"
       },
+      "summary": "Free music from Jamendo, published under Creative Commons.",
       "tier": "official",
       "type": "input_module"
     },
@@ -438,7 +441,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "bundle",
-      "description": "Index a local or network music library, enrich its metadata, and optionally enable semantic music search.",
+      "description": "Plays the music files you keep on the server or on a network share. It reads their tags, fills in missing details and cover art from online sources, and can find tracks by mood or by a description of the music.",
       "distribution": "kalinka-plugin-localfiles",
       "entry_point": "kalinka_plugin_localfiles",
       "id": "localfiles",
@@ -457,6 +460,7 @@
         "repository": "https://github.com/Kalinka-Player/KalinkaPlayer",
         "subdirectory": "packages/kalinka-plugin-localfiles"
       },
+      "summary": "Play your own music files from {player} or a network share.",
       "tier": "official",
       "type": "input_module"
     },
@@ -470,7 +474,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "bundle",
-      "description": "Control volume, power, and input selection on Yamaha MusicCast devices.",
+      "description": "Lets Kalinka Player control a Yamaha MusicCast amplifier or receiver: its volume, its power, and switching it to the input Kalinka Player is connected to.",
       "device_support": {
         "families": [
           "Yamaha MusicCast / Yamaha Extended Control"
@@ -500,6 +504,7 @@
         "repository": "https://github.com/Kalinka-Player/KalinkaPlayer",
         "subdirectory": "packages/kalinka-plugin-musiccast"
       },
+      "summary": "Control the volume and power of a Yamaha MusicCast device.",
       "tier": "unofficial",
       "type": "output_device"
     },
@@ -514,7 +519,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "independent",
-      "description": "Unofficial Qobuz browsing, playback, and Qobuz Connect input for Kalinka Player. Requires an active Qobuz subscription. Not affiliated with or endorsed by Qobuz.",
+      "description": "Browse and play Qobuz in Kalinka Player, or pick Kalinka Player as a speaker in the Qobuz app with Qobuz Connect. You need a paid Qobuz subscription. Not made or endorsed by Qobuz.",
       "distribution": "kalinka-plugin-qobuz",
       "entry_point": "kalinka_plugin_qobuz",
       "id": "qobuz",
@@ -594,6 +599,7 @@
         "repository": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz",
         "subdirectory": ""
       },
+      "summary": "Stream Qobuz on {player}, or play to it from the Qobuz app.",
       "tier": "unofficial",
       "type": "input_module"
     },
@@ -608,7 +614,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "independent",
-      "description": "Run the official Roon Bridge on the Kalinka Player server and display track information, artwork, and playback progress. Roon sends audio directly to the local DAC. Requires Linux, a Roon Server and subscription, Node.js 18+, Python 3.11+, and a Kalinka Player server with the external playback API and SDK >=3.7,<4. The proprietary Bridge is downloaded on enable. This independent integration is not Roon Ready certified or endorsed by Roon Labs.",
+      "description": "Runs Roon Bridge on the server, so Roon can play to the DAC connected to it. Kalinka Player shows what Roon is playing, with cover art and progress. You need a Roon Server and a Roon subscription. Roon Bridge is downloaded from Roon Labs when you turn the plugin on. Not Roon Ready certified or endorsed by Roon Labs.",
       "distribution": "kalinka-plugin-roon",
       "entry_point": "kalinka_plugin_roon",
       "id": "roon",
@@ -752,6 +758,7 @@
         "repository": "https://github.com/Kalinka-Player/kalinka-plugin-roon",
         "subdirectory": ""
       },
+      "summary": "Use {player} as an audio output in Roon.",
       "tier": "unofficial",
       "type": "input_module"
     },
@@ -766,7 +773,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "independent",
-      "description": "Unofficial Spotify Connect input for Kalinka Player. Requires Linux, Spotify Premium, the librespot bridge patched for Kalinka Player, and compatible server and renderer components.",
+      "description": "Lets you pick Kalinka Player as a speaker in the Spotify app, with Spotify Connect. You need Spotify Premium. Not made or endorsed by Spotify.",
       "distribution": "kalinka-plugin-spotify",
       "entry_point": "kalinka_plugin_spotify",
       "id": "spotify",
@@ -1064,6 +1071,7 @@
         "repository": "https://github.com/Kalinka-Player/kalinka-plugin-spotify",
         "subdirectory": ""
       },
+      "summary": "Play from the Spotify app to {player} with Spotify Connect.",
       "tier": "unofficial",
       "type": "input_module"
     },
@@ -1076,7 +1084,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "bundle",
-      "description": "Expose Kalinka Player as a UPnP MediaRenderer so network control apps can play through the selected Kalinka Player output.",
+      "description": "Makes Kalinka Player appear as a UPnP renderer on your network, so UPnP control apps can play through the output selected in Kalinka Player.",
       "distribution": "kalinka-plugin-upnp",
       "entry_point": "kalinka_plugin_upnp",
       "id": "upnp",
@@ -1095,10 +1103,11 @@
         "repository": "https://github.com/Kalinka-Player/KalinkaPlayer",
         "subdirectory": "packages/kalinka-plugin-upnp"
       },
+      "summary": "Play to {player} from UPnP apps on your network.",
       "tier": "unofficial",
       "type": "input_module"
     }
   ],
-  "revision": "e5fed0d313f8340ec7119622a8dc5692565cfa78",
+  "revision": "252d01f660337ced6ef337419d5a347a54996754",
   "schema_version": 1
 }

@@ -2,7 +2,8 @@
   "schema_version": 1,
   "id": "airplay",
   "name": "AirPlay",
-  "description": "Play from an iPhone, iPad or Mac to Kalinka Player over AirPlay. Unofficial AirPlay 2 and classic AirPlay receiver; not affiliated with or endorsed by Apple.",
+  "summary": "Play from an iPhone, iPad or Mac to {player} over AirPlay.",
+  "description": "Turns Kalinka Player into an AirPlay speaker, so an iPhone, iPad or Mac can play to it. Works with AirPlay 2 and classic AirPlay. Not made or endorsed by Apple.",
   "distribution": "kalinka-plugin-airplay",
   "entry_point": "kalinka_plugin_airplay",
   "creator": {
