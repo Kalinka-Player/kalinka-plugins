@@ -31,6 +31,87 @@
   "delivery": "independent",
   "releases": [
     {
+      "version": "0.2.1",
+      "channel": "stable",
+      "published_at": "2026-10-13T13:04:17Z",
+      "source_tag": "kalinka-plugin-airplay-v0.2.1",
+      "source_commit": "c324f301afb6a0448d02c3d38dfe04d4f719bdc2",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/tag/kalinka-plugin-airplay-v0.2.1",
+      "requires": {
+        "server": ">=5.9,<6",
+        "sdk": ">=3.11,<4",
+        "python": ">=3.11",
+        "renderer": ">=0.5,<1",
+        "platforms": [
+          "linux"
+        ],
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "capabilities": [],
+        "notes": [
+          "Requires Kalinka Player server 5.9.0 or newer (below 6.0.0), which brings plugin SDK 3.11, and a Kalinka Player renderer 0.5.0 or newer (below 1.0.0) with live stream support. The audio plays through the renderer selected in Kalinka Player, on this or another machine; the server itself opens no audio hardware.",
+          "Each stream is encoded at the sender's own sample rate and bit depth: 16-bit 44.1 kHz for classic AirPlay and AirPlay 2 realtime streams, 24-bit 48 kHz for Apple Music Lossless over AirPlay 2. Kalinka Player names the codec as FLAC, the lossless carrier to the renderer, whatever the sender used.",
+          "The package bundles shairport-sync 5.5.2 with AirPlay 2 and nqptp 1.2.8, built against Debian 13's libraries, which apt checks on install. It installs on Debian 13 and on 64-bit Raspberry Pi OS 13 or DietPi based on it, on amd64 or arm64; a 32-bit userspace does not qualify.",
+          "AirPlay 2 needs UDP ports 319 and 320 for nqptp; the package grants the server CAP_NET_BIND_SERVICE for it. Keep a distribution shairport-sync or nqptp service disabled. When the ports are taken, classic AirPlay is offered instead. A firewall must allow UDP 5353, TCP 7000, UDP 319-320 and 6000-6009, and the ephemeral range 32768-60999 over TCP and UDP.",
+          "This independent integration is not certified or endorsed by Apple. Remote control from Kalinka Player (pause, play, next, previous) reaches classic AirPlay senders only; AirPlay 2 senders are controlled from the sending device."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-airplay_0.2.1_amd64.deb",
+          "platform": "linux",
+          "architectures": [
+            "x86_64"
+          ],
+          "package": {
+            "name": "kalinka-plugin-airplay",
+            "version": "0.2.1",
+            "architecture": "amd64"
+          },
+          "targets": [
+            {
+              "id": "debian",
+              "versions": [
+                "13"
+              ]
+            }
+          ],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.2.1/kalinka-plugin-airplay_0.2.1_amd64.deb",
+          "sha256": "3b466a9a3e8844c3c2c1903a2b86e90db182811927e90aff20929687b635d212",
+          "size_bytes": 887668
+        },
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-airplay_0.2.1_arm64.deb",
+          "platform": "linux",
+          "architectures": [
+            "aarch64"
+          ],
+          "package": {
+            "name": "kalinka-plugin-airplay",
+            "version": "0.2.1",
+            "architecture": "arm64"
+          },
+          "targets": [
+            {
+              "id": "debian",
+              "versions": [
+                "13"
+              ]
+            }
+          ],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases/download/kalinka-plugin-airplay-v0.2.1/kalinka-plugin-airplay_0.2.1_arm64.deb",
+          "sha256": "3165cbc998555beae79aadd59be61bdee3bb0462de61bee1fc72751820c5fb57",
+          "size_bytes": 869112
+        }
+      ]
+    },
+    {
       "version": "0.2.0",
       "channel": "stable",
       "published_at": "2026-10-13T12:13:52Z",
