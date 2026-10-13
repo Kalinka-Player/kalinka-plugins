@@ -288,7 +288,7 @@
         }
       ],
       "maturity": "stable",
-      "name": "Local Files",
+      "name": "My Library",
       "releases": [],
       "schema_version": 1,
       "source": {
@@ -937,6 +937,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "463a271994ced137ca919400d5b5800f3971b07b",
+  "revision": "a0fb4e4c5c1544a4cb56562ac57a37e14f08d7cb",
   "schema_version": 1
 }

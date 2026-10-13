@@ -8,10 +8,10 @@ This initial hub contains nine registered plugins, a JSON schema, an offline val
 
 | Plugin | Type | Description |
 | --- | --- | --- |
-| [Local Files](plugins/localfiles.json) | Input source | Local music files, metadata, and semantic search. |
+| [My Library](plugins/localfiles.json) | Input source | Your own music files on the server or a network share, with metadata and semantic search. |
 | [Jamendo](plugins/jamendo.json) | Input source | Browse and play independent music from Jamendo. |
 
-Local Files and Jamendo are the only official plugins in this catalog. Both are included in the Kalinka Player server bundle, not independently updatable through this catalog.
+My Library and Jamendo are the only official plugins in this catalog. Both are included in the Kalinka Player server bundle, not independently updatable through this catalog.
 
 ## Unofficial
 

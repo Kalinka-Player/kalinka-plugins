@@ -6,7 +6,7 @@ Use the full product name **Kalinka Player** in user-facing descriptions, requir
 
 Catalog maintainers verify repository ownership, reserve identities, and assign `official` or `unofficial`. New community entries should propose `unofficial`; experimental quality is an independent maturity value. Changes to ownership, identity, or trust tier require maintainer review. Do not silently retarget an abandoned plugin to a new publisher.
 
-Jamendo and Local Files are the only official plugins in this catalog. Every other entry is unofficial, independently of whether it is bundled with the server or marked stable/experimental.
+Jamendo and My Library are the only official plugins in this catalog. Every other entry is unofficial, independently of whether it is bundled with the server or marked stable/experimental.
 
 ## Declare the plugin type
 
