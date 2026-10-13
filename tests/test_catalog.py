@@ -57,7 +57,7 @@ class CatalogTests(unittest.TestCase):
     def test_catalog_display_text_uses_full_product_name(self):
         for plugin in build_catalog()["plugins"]:
             support = plugin.get("device_support", {})
-            display_text = [plugin["name"], plugin["description"]]
+            display_text = [plugin["name"], plugin["summary"], plugin["description"]]
             for field in ("models", "families", "notes"):
                 display_text.extend(support.get(field, []))
             for release in plugin["releases"]:
@@ -221,6 +221,17 @@ class CatalogTests(unittest.TestCase):
             with self.subTest(field=field):
                 altered = copy.deepcopy(self.plugin)
                 altered[field] = value
+                with self.assertRaises(ValidationError):
+                    validate_plugin(altered, self.validator)
+
+    def test_summary_is_one_short_line(self):
+        for value in (None, "", "x" * 121, "First line.\nSecond line."):
+            with self.subTest(value=value):
+                altered = copy.deepcopy(self.plugin)
+                if value is None:
+                    del altered["summary"]
+                else:
+                    altered["summary"] = value
                 with self.assertRaises(ValidationError):
                     validate_plugin(altered, self.validator)
 

@@ -8,8 +8,8 @@ This initial hub contains nine registered plugins, a JSON schema, an offline val
 
 | Plugin | Type | Description |
 | --- | --- | --- |
-| [My Library](plugins/localfiles.json) | Input source | Your own music files on the server or a network share, with metadata and semantic search. |
-| [Jamendo](plugins/jamendo.json) | Input source | Browse and play independent music from Jamendo. |
+| [My Library](plugins/localfiles.json) | Input source | Play your own music files from the server or a network share. |
+| [Jamendo](plugins/jamendo.json) | Input source | Free music from Jamendo, published under Creative Commons. |
 
 My Library and Jamendo are the only official plugins in this catalog. Both are included in the Kalinka Player server bundle, not independently updatable through this catalog.
 
@@ -17,9 +17,9 @@ My Library and Jamendo are the only official plugins in this catalog. Both are i
 
 | Plugin | Type | Description |
 | --- | --- | --- |
-| [UPnP](plugins/upnp.json) | Input source | Playback from UPnP control applications. |
-| [MusicCast](plugins/musiccast.json) | Device control | Yamaha MusicCast volume, power, and configured-input control. |
-| [Dummy Device](plugins/dummydevice.json) | Device control | Experimental simulated output device for development and testing. |
+| [UPnP](plugins/upnp.json) | Input source | Play to Kalinka Player from UPnP apps on your network. |
+| [MusicCast](plugins/musiccast.json) | Device control | Control the volume and power of a Yamaha MusicCast device. |
+| [Dummy Device](plugins/dummydevice.json) | Device control | A pretend output device for testing plugins. |
 
 These three plugins are bundled with Kalinka Player and update with the server; being bundled does not make a plugin official. MusicCast declares its MusicCast / Yamaha Extended Control family and readable limitations; a verified exact-model list is not yet available.
 

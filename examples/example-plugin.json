@@ -2,6 +2,7 @@
   "schema_version": 1,
   "id": "example-radio",
   "name": "Example Radio",
+  "summary": "Synthetic tile text for the schema example.",
   "description": "Synthetic schema example. Not a real plugin or an installable release.",
   "distribution": "kalinka-plugin-example-radio",
   "entry_point": "kalinka_plugin_example_radio",

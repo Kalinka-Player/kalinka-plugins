@@ -2,6 +2,7 @@
   "schema_version": 1,
   "id": "example-device",
   "name": "Example Device Control",
+  "summary": "Synthetic tile text for the device example.",
   "description": "Synthetic model-and-family metadata example. Not a real device plugin.",
   "distribution": "kalinka-plugin-example-device",
   "entry_point": "kalinka_plugin_example_device",
