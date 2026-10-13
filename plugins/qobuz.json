@@ -17,6 +17,44 @@
   "delivery": "independent",
   "releases": [
     {
+      "version": "5.1.1",
+      "channel": "stable",
+      "published_at": "2026-10-13T16:58:12Z",
+      "source_tag": "kalinka-plugin-qobuz-v5.1.1",
+      "source_commit": "261128621ce4f1efa4aea1954acabc9e92228f45",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/tag/kalinka-plugin-qobuz-v5.1.1",
+      "requires": {
+        "server": ">=5.5,<6",
+        "sdk": ">=3.6,<4",
+        "python": ">=3.11",
+        "platforms": ["linux"],
+        "architectures": ["all"],
+        "capabilities": [],
+        "notes": [
+          "Requires Kalinka Player server 5.5.0 or newer (below 6.0.0), which brings plugin SDK 3.6, and Python 3.11 or newer.",
+          "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+          "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+          "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
+          "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-qobuz_5.1.1_all.deb",
+          "platform": "linux",
+          "architectures": ["all"],
+          "package": {"name": "kalinka-plugin-qobuz", "version": "5.1.1", "architecture": "all"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/download/kalinka-plugin-qobuz-v5.1.1/kalinka-plugin-qobuz_5.1.1_all.deb",
+          "sha256": "bab5f2491fe09f7f1c22296f86a180fec43f68b9985f8ca75d6b4d1e0b4bc5dc",
+          "size_bytes": 96866
+        }
+      ]
+    },
+    {
       "version": "5.0.1",
       "channel": "stable",
       "published_at": "2026-09-28T12:11:51Z",
