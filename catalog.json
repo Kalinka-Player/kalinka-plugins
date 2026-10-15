@@ -1199,6 +1199,103 @@
     },
     {
       "categories": [
+        "tidal",
+        "streaming",
+        "catalog"
+      ],
+      "creator": {
+        "name": "Dmitry Savin",
+        "url": "https://github.com/madenvel"
+      },
+      "delivery": "independent",
+      "description": "Browse TIDAL discovery pages, mixes, favorites and playlists, search for music, and play supported streams in Kalinka Player. Sign in with your TIDAL account; playback requires a subscription. Uses the unofficial tidalapi client and is not made or endorsed by TIDAL.",
+      "distribution": "kalinka-plugin-tidal",
+      "entry_point": "kalinka_plugin_tidal",
+      "id": "tidal",
+      "license": "GPL-3.0-or-later",
+      "maintainers": [
+        {
+          "name": "Kalinka Player",
+          "url": "https://github.com/Kalinka-Player"
+        }
+      ],
+      "maturity": "experimental",
+      "name": "TIDAL",
+      "releases": [
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
+              "filename": "kalinka-plugin-tidal_0.1.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-tidal",
+                "version": "0.1.0"
+              },
+              "platform": "linux",
+              "sha256": "44eedca870fc45d6aaaed6876c44bef8e1839d7efa5d4a6ca63900e106a0ef22",
+              "size_bytes": 27568,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/download/kalinka-plugin-tidal-v0.1.0/kalinka-plugin-tidal_0.1.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-15T21:06:47Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.1.0",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.9.1 or newer (below 6), plugin SDK 3.11 or newer (below 4), and Python 3.11 or newer.",
+              "Sign in with a TIDAL account using the browser link in module status. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
+              "Supports direct unencrypted FLAC and MP3 streams. Segmented DASH, encrypted streams and AAC/MP4 playback are unsupported. TIDAL collections are read-only.",
+              "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
+              "This experimental integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.11,<4",
+            "server": ">=5.9.1,<6"
+          },
+          "source_commit": "aa017f9d26c561a2b5218d99145979624d5237df",
+          "source_tag": "kalinka-plugin-tidal-v0.1.0",
+          "version": "0.1.0",
+          "withdrawn": false
+        }
+      ],
+      "schema_version": 1,
+      "source": {
+        "repository": "https://github.com/Kalinka-Player/kalinka-plugin-tidal",
+        "subdirectory": ""
+      },
+      "summary": "Browse and play TIDAL on {player}.",
+      "tier": "unofficial",
+      "type": "input_module"
+    },
+    {
+      "categories": [
         "network-audio"
       ],
       "creator": {
@@ -1230,6 +1327,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "a0a96aaf6f4cd8145397ff660b57001f8a1ea7fc",
+  "revision": "10219682aae97516308cda75142d2b3bf33887a2",
   "schema_version": 1
 }

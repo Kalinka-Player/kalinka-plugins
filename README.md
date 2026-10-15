@@ -2,7 +2,7 @@
 
 The curated plugin catalog for [Kalinka Player](https://github.com/Kalinka-Player/KalinkaPlayer). Discover input sources and optional amplifier or AVR controls, with creator, source, license, plugin type, and hardware-support metadata.
 
-This initial hub contains nine registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify, Qobuz, Roon Bridge and AirPlay have independent source repositories and native release records with exact download URLs and checksums.
+This initial hub contains ten registered plugins, a JSON schema, an offline validator/catalog builder, and validation CI. It does **not** install plugins or enable automatic updates. The five bundled plugins update with Kalinka Player; Spotify, Qobuz, TIDAL, Roon Bridge and AirPlay have independent source repositories and native release records with exact download URLs and checksums.
 
 ## Official
 
@@ -27,10 +27,13 @@ These three plugins are bundled with Kalinka Player and update with the server; 
 | --- | --- | --- | --- |
 | [Spotify Connect](plugins/spotify.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-spotify) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases) | Linux, Python 3.11+, server ≥5.3.0 and <6.0.0, renderer ≥0.5.0 and <1.0.0, SDK ≥3.5 and <4, Spotify Premium, and patched librespot. |
 | [Qobuz](plugins/qobuz.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-qobuz) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases) | Active Qobuz subscription; current version 5 documentation requires server ≥5.2 and SDK ≥3.4 and <4. |
+| [TIDAL](plugins/tidal.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-tidal) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases) | TIDAL account and subscription for playback; Debian 13 or Ubuntu 24.04 on ARM64 or x86-64; Python 3.11+, server ≥5.9.1 and <6, SDK ≥3.11 and <4. |
 | [Roon Bridge](plugins/roon.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-roon) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-roon/releases) | Linux x86-64, ARM64 or ARMv7hf; Python 3.11+, Node.js 18+, SDK ≥3.7 and <4 with a Kalinka Player server implementing the external playback API; Roon Server and subscription. |
 | [AirPlay](plugins/airplay.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-airplay) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases) | Linux x86-64 or ARM64 on Debian 13; Python 3.11+, server ≥5.9.0 and <6.0.0, SDK ≥3.11 and <4, renderer ≥0.5.0 and <1.0.0. Bundles shairport-sync 5.5.2 and nqptp 1.2.8. |
 
-All four integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
+All five integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
+
+TIDAL reuses the unofficial `tidalapi` client to expose Home, Explore, Genres, Moods, My Mixes and My Collection, plus search and album, artist and playlist browsing. Version 0.1.0 supports direct unencrypted FLAC/MP3 playback; DASH, encrypted and AAC streams are unsupported. Live account sign-in and playback have not been verified. Its architecture-independent DEB is built and tested on all four declared OS/architecture combinations. See [release verification](docs/tidal-release-verification.md).
 
 Roon Bridge downloads Roon Labs' proprietary audio engine when enabled; audio plays on the Kalinka Player server's local DAC and bypasses the Kalinka Player renderer. The plugin displays metadata, artwork and progress. From 0.2.0 it routes the Kalinka Player volume slider to the Roon output on a server with external-volume support (plugin SDK 3.11 or newer; released servers up to 5.8.0 ship older SDKs and show playback without Roon volume), can attach to a Roon Server's own audio endpoint on the same machine, and keeps Roon's session across pause. It does not guarantee seamless switching between audio sources.
 
@@ -42,7 +45,7 @@ Managed Linux delivery is **native-package-first**. The initial curated distro a
 
 ## Experimental
 
-[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify, Qobuz, Roon Bridge and AirPlay above are also experimental, while retaining their unofficial publisher tier.
+[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify, Qobuz, TIDAL, Roon Bridge and AirPlay above are also experimental, while retaining their unofficial publisher tier.
 
 `tier` describes maintenance authority; `maturity` describes readiness. They are independent. Plugin type is separately declared as `input_module` or `output_device`, matching the SDK.
 

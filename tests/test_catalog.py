@@ -38,12 +38,12 @@ class CatalogTests(unittest.TestCase):
         catalog = build_catalog()
         self.assertEqual({entry["id"] for entry in catalog["plugins"]}, {
             "dummydevice", "jamendo", "localfiles", "musiccast", "upnp", "spotify", "qobuz", "roon",
-            "airplay",
+            "airplay", "tidal",
         })
         self.assertTrue(all(entry["releases"] == [] for entry in catalog["plugins"]
                             if entry["delivery"] == "bundle"))
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["releases"]},
-                         {"spotify", "qobuz", "roon", "airplay"})
+                         {"spotify", "qobuz", "roon", "airplay", "tidal"})
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["delivery"] == "bundle"}, {
             "dummydevice", "jamendo", "localfiles", "musiccast", "upnp",
         })
@@ -94,11 +94,13 @@ class CatalogTests(unittest.TestCase):
             "qobuz": "input_module",
             "roon": "input_module",
             "airplay": "input_module",
+            "tidal": "input_module",
         })
 
-    def test_spotify_and_qobuz_are_unofficial_independent_inputs(self):
+    def test_streaming_services_are_unofficial_independent_inputs(self):
         entries = {p["id"]: p for p in build_catalog()["plugins"]}
-        for plugin_id, license_id in (("spotify", "MIT"), ("qobuz", "Apache-2.0")):
+        for plugin_id, license_id in (("spotify", "MIT"), ("qobuz", "Apache-2.0"),
+                                      ("tidal", "GPL-3.0-or-later")):
             with self.subTest(plugin_id=plugin_id):
                 plugin = entries[plugin_id]
                 self.assertEqual(plugin["tier"], "unofficial")
@@ -114,6 +116,27 @@ class CatalogTests(unittest.TestCase):
                 self.assertGreaterEqual(len(plugin["releases"]), 1)
                 for release in plugin["releases"]:
                     self.assertEqual(release["data_rollback"], "manual")
+
+    def test_tidal_portable_package_respects_tested_native_targets(self):
+        tidal = read_json(ROOT / "plugins" / "tidal.json")
+        release = tidal["releases"][0]
+        artifact = release["artifacts"][0]
+        self.assertEqual(artifact["package"]["architecture"], "all")
+        for architecture in ("x86_64", "aarch64", "armv7l", "x86", "riscv64"):
+            for distro_id, distro_version in (("debian", "13"), ("ubuntu", "24.04"),
+                                               ("debian", "12"), ("ubuntu", "26.04"),
+                                               ("raspbian", "13")):
+                with self.subTest(architecture=architecture, distro=distro_id,
+                                  version=distro_version):
+                    self.assertEqual(
+                        artifact_supports_target(
+                            release, artifact, platform="linux", package_format="deb",
+                            architecture=architecture, distro_id=distro_id,
+                            distro_version=distro_version,
+                        ),
+                        architecture in {"x86_64", "aarch64"}
+                        and (distro_id, distro_version) in {("debian", "13"), ("ubuntu", "24.04")},
+                    )
 
     def test_plugin_type_is_required_even_with_category_tags(self):
         del self.plugin["type"]
