@@ -1208,7 +1208,7 @@
         "url": "https://github.com/madenvel"
       },
       "delivery": "independent",
-      "description": "Browse TIDAL discovery pages, mixes, favorites and playlists, search for music, and play supported streams in Kalinka Player. Sign in with your TIDAL account; playback requires a subscription. Uses the unofficial tidalapi client and is not made or endorsed by TIDAL.",
+      "description": "Browse your TIDAL collection and personalized mixes, search for music, and play supported streams in Kalinka Player. Sign in with your TIDAL account; playback requires a subscription. Uses the unofficial tidalapi client and is not made or endorsed by TIDAL.",
       "distribution": "kalinka-plugin-tidal",
       "entry_point": "kalinka_plugin_tidal",
       "id": "tidal",
@@ -1222,6 +1222,69 @@
       "maturity": "experimental",
       "name": "TIDAL",
       "releases": [
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
+              "filename": "kalinka-plugin-tidal_0.1.1_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-tidal",
+                "version": "0.1.1"
+              },
+              "platform": "linux",
+              "sha256": "f9474fe42b087246497a86855ea3311b6a6943c8bd67e3719d8814a6ecb9bc1b",
+              "size_bytes": 30228,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/download/kalinka-plugin-tidal-v0.1.1/kalinka-plugin-tidal_0.1.1_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-16T18:48:02Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.1.1",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.9.1 or newer (below 6), plugin SDK 3.11 or newer (below 4), and Python 3.11 or newer.",
+              "Sign in with a TIDAL account using the browser link in plugin settings or module status. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
+              "Automatically requests CD-quality lossless audio and supports direct unencrypted FLAC and MP3 streams. TIDAL Max / hi-res, segmented DASH, encrypted streams and AAC/MP4 playback are unsupported. TIDAL collections are read-only.",
+              "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
+              "This experimental integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified.",
+              "To change accounts, enable Forget TIDAL account on next restart in plugin settings, apply and restart, then follow the sign-in link. The switch resets automatically."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.11,<4",
+            "server": ">=5.9.1,<6"
+          },
+          "source_commit": "dfb6c8a25d0e900963b0b590f20d24332dc8193f",
+          "source_tag": "kalinka-plugin-tidal-v0.1.1",
+          "version": "0.1.1",
+          "withdrawn": false
+        },
         {
           "artifacts": [
             {
@@ -1327,6 +1390,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "10219682aae97516308cda75142d2b3bf33887a2",
+  "revision": "b5ad1390f4ad31ac9779e38d1caa8184a8e22bd6",
   "schema_version": 1
 }

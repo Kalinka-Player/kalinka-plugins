@@ -1,4 +1,32 @@
-# TIDAL 0.1.0 release verification
+# TIDAL release verification
+
+## 0.1.1
+
+Verified on 2026-10-16 against the published [TIDAL 0.1.1 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.1.1).
+
+| Field | Verified value |
+| --- | --- |
+| Source tag | `kalinka-plugin-tidal-v0.1.1` |
+| Source commit | `dfb6c8a25d0e900963b0b590f20d24332dc8193f` |
+| Published at | `2026-10-16T18:48:02Z` |
+| Artifact | `kalinka-plugin-tidal_0.1.1_all.deb` |
+| Size | 30,228 bytes |
+| SHA-256 | `f9474fe42b087246497a86855ea3311b6a6943c8bd67e3719d8814a6ecb9bc1b` |
+| DEB Package / Version / Architecture | `kalinka-plugin-tidal` / `0.1.1` / `all` |
+| Python distribution / version | `kalinka-plugin-tidal` / `0.1.1` |
+| Entry point | `kalinka_plugin_tidal = kalinka_plugin_tidal:KalinkaPluginTidal` |
+
+Downloaded the DEB, `SHA256SUMS`, and `build-info.json`. All three match their GitHub asset sizes and SHA-256 digests and the canonical Debian 13 ARM64 CI artifacts byte for byte. The DEB also matches its checksum file and build metadata, including the tagged source commit.
+
+Inspected native headers, the embedded wheel, dependencies, entry point, trigger and removal script without installing the package or executing its contents. The only payload file is the `py3-none-any` wheel under `/opt/kalinka/wheels/`. Python and SDK requirements, native dependencies and maintainer scripts are unchanged from 0.1.0 and match the tagged source.
+
+The [release workflow](https://github.com/Kalinka-Player/kalinka-plugin-tidal/actions/runs/38949896126) passed all 75 tests on Python 3.11 and 3.13, plus package builds, inspections and packaged-wheel tests on Debian 13 and Ubuntu 24.04, each on ARM64 and amd64. All use the SDK from released Kalinka Player 5.9.1. The published package comes from Debian 13 ARM64 with Python 3.13.5.
+
+This release adds an account reset setting and visible sign-in and quality information, reduces the catalog root to My Collection and My Mixes, fixes complete queue additions, and preserves stable catalog section links. Saved discovery links remain resolvable. Earlier release records and artifact digests are retained unchanged.
+
+Automated tests use fake TIDAL responses, including account replacement and session restoration. Live account sign-in and playback remain unverified. The plugin automatically requests CD-quality lossless audio; TIDAL Max / hi-res, DASH, encrypted and AAC/MP4 playback remain unsupported. Collections remain read-only. The unofficial, experimental classification and manual data rollback policy are unchanged.
+
+## 0.1.0
 
 Verified on 2026-10-15 against the published [TIDAL 0.1.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.1.0).
 
