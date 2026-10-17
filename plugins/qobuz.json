@@ -12,7 +12,7 @@
   "source": {"repository": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz", "subdirectory": ""},
   "type": "input_module",
   "tier": "unofficial",
-  "maturity": "experimental",
+  "maturity": "stable",
   "categories": ["qobuz", "streaming", "connect"],
   "delivery": "independent",
   "releases": [
@@ -32,7 +32,7 @@
         "capabilities": [],
         "notes": [
           "Requires Kalinka Player server 5.5.0 or newer (below 6.0.0), which brings plugin SDK 3.6, and Python 3.11 or newer.",
-          "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+          "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
           "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
           "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
           "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
@@ -70,7 +70,7 @@
         "capabilities": [],
         "notes": [
           "Requires Kalinka Player server 5.5.0 or newer (below 6.0.0), which brings plugin SDK 3.6, and Python 3.11 or newer.",
-          "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+          "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
           "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
           "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
           "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
@@ -107,7 +107,7 @@
         "architectures": ["all"],
         "capabilities": [],
         "notes": [
-          "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+          "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
           "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
           "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
           "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."

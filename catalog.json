@@ -612,7 +612,7 @@
           "url": "https://github.com/Kalinka-Player"
         }
       ],
-      "maturity": "experimental",
+      "maturity": "stable",
       "name": "Qobuz",
       "releases": [
         {
@@ -659,7 +659,7 @@
             "capabilities": [],
             "notes": [
               "Requires Kalinka Player server 5.5.0 or newer (below 6.0.0), which brings plugin SDK 3.6, and Python 3.11 or newer.",
-              "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+              "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
               "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
               "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
               "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
@@ -720,7 +720,7 @@
             "capabilities": [],
             "notes": [
               "Requires Kalinka Player server 5.5.0 or newer (below 6.0.0), which brings plugin SDK 3.6, and Python 3.11 or newer.",
-              "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+              "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
               "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
               "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
               "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
@@ -780,7 +780,7 @@
             ],
             "capabilities": [],
             "notes": [
-              "An active Qobuz subscription is required. This experimental integration is not endorsed by Qobuz.",
+              "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
               "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
               "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
               "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
@@ -988,7 +988,7 @@
           "url": "https://github.com/Kalinka-Player"
         }
       ],
-      "maturity": "experimental",
+      "maturity": "stable",
       "name": "Spotify Connect",
       "releases": [
         {
@@ -1301,7 +1301,7 @@
           "url": "https://github.com/Kalinka-Player"
         }
       ],
-      "maturity": "experimental",
+      "maturity": "stable",
       "name": "TIDAL",
       "releases": [
         {
@@ -1352,7 +1352,7 @@
               "Sign in with a TIDAL account using the browser link in plugin settings or module status. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
               "Automatically requests CD-quality lossless audio and supports direct unencrypted FLAC and MP3 streams. TIDAL Max / hi-res, segmented DASH, encrypted streams and AAC/MP4 playback are unsupported. TIDAL collections are read-only.",
               "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
-              "This experimental integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified.",
+              "This integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified.",
               "To change accounts, enable Forget TIDAL account on next restart in plugin settings, apply and restart, then follow the sign-in link. The switch resets automatically."
             ],
             "platforms": [
@@ -1415,7 +1415,7 @@
               "Sign in with a TIDAL account using the browser link in module status. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
               "Supports direct unencrypted FLAC and MP3 streams. Segmented DASH, encrypted streams and AAC/MP4 playback are unsupported. TIDAL collections are read-only.",
               "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
-              "This experimental integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified."
+              "This integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified."
             ],
             "platforms": [
               "linux"
@@ -1468,10 +1468,10 @@
         "subdirectory": "packages/kalinka-plugin-upnp"
       },
       "summary": "Play to {player} from UPnP apps on your network.",
-      "tier": "unofficial",
+      "tier": "official",
       "type": "input_module"
     }
   ],
-  "revision": "30d62139f420cdb1544eb98c50811f44265cbd17",
+  "revision": "58f4faf385aee6dfd7ab65d1decccf4796f06fde",
   "schema_version": 1
 }

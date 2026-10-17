@@ -12,7 +12,7 @@
   "source": {"repository": "https://github.com/Kalinka-Player/kalinka-plugin-spotify", "subdirectory": ""},
   "type": "input_module",
   "tier": "unofficial",
-  "maturity": "experimental",
+  "maturity": "stable",
   "categories": ["spotify", "streaming", "connect"],
   "delivery": "independent",
   "releases": [

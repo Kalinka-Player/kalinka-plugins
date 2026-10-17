@@ -10,18 +10,18 @@ This initial hub contains ten registered plugins, a JSON schema, an offline vali
 | --- | --- | --- |
 | [My Library](plugins/localfiles.json) | Input source | Play your own music files from the server or a network share. |
 | [Jamendo](plugins/jamendo.json) | Input source | Free music from Jamendo, published under Creative Commons. |
+| [UPnP](plugins/upnp.json) | Input source | Play to Kalinka Player from UPnP apps on your network. |
 
-My Library and Jamendo are the only official plugins in this catalog. Both are included in the Kalinka Player server bundle, not independently updatable through this catalog.
+My Library, Jamendo and UPnP are the only official plugins in this catalog. All three are included in the Kalinka Player server bundle, not independently updatable through this catalog.
 
 ## Unofficial
 
 | Plugin | Type | Description |
 | --- | --- | --- |
-| [UPnP](plugins/upnp.json) | Input source | Play to Kalinka Player from UPnP apps on your network. |
 | [MusicCast](plugins/musiccast.json) | Device control | Control the volume and power of a Yamaha MusicCast device. |
 | [Dummy Device](plugins/dummydevice.json) | Device control | A pretend output device for testing plugins. |
 
-These three plugins are bundled with Kalinka Player and update with the server; being bundled does not make a plugin official. MusicCast declares its MusicCast / Yamaha Extended Control family and readable limitations; a verified exact-model list is not yet available.
+These two plugins are bundled with Kalinka Player and update with the server; being bundled does not make a plugin official. MusicCast declares its MusicCast / Yamaha Extended Control family and readable limitations; a verified exact-model list is not yet available.
 
 | Plugin | Type | Source and existing releases | Requirements |
 | --- | --- | --- | --- |
@@ -31,7 +31,7 @@ These three plugins are bundled with Kalinka Player and update with the server; 
 | [Roon Bridge](plugins/roon.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-roon) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-roon/releases) | Linux x86-64, ARM64 or ARMv7hf; Python 3.11+, Node.js 18+, SDK ≥3.7 and <4 with a Kalinka Player server implementing the external playback API; Roon Server and subscription. |
 | [AirPlay](plugins/airplay.json) | Input source | [Source](https://github.com/Kalinka-Player/kalinka-plugin-airplay) · [Releases](https://github.com/Kalinka-Player/kalinka-plugin-airplay/releases) | Linux x86-64 or ARM64 on Debian 13; Python 3.11+, server ≥5.9.0 and <6.0.0, SDK ≥3.11 and <4, renderer ≥0.5.0 and <1.0.0. Bundles shairport-sync 5.5.2 and nqptp 1.2.8. |
 
-All five integrations are registered as **unofficial** and conservatively classified **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
+All five integrations are registered as **unofficial**. Spotify, Qobuz and TIDAL are classified **stable**; Roon Bridge and AirPlay remain **experimental**. They are independent of the music-service vendors; registration does not imply vendor endorsement or production certification.
 
 TIDAL reuses the unofficial `tidalapi` client to expose My Collection and My Mixes, plus search and album, artist and playlist browsing. Version 0.1.1 adds an account reset setting, displays the automatic CD-quality lossless request, and reduces discovery navigation while preserving saved links. It also fixes incomplete queue additions and unstable catalog section links. Playback supports direct unencrypted FLAC/MP3; TIDAL Max / hi-res, DASH, encrypted and AAC streams are unsupported. Live account sign-in and playback have not been verified. Its architecture-independent DEB is built and tested on all four declared OS/architecture combinations. See [release verification](docs/tidal-release-verification.md).
 
@@ -45,7 +45,7 @@ Managed Linux delivery is **native-package-first**. The initial curated distro a
 
 ## Experimental
 
-[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Spotify, Qobuz, TIDAL, Roon Bridge and AirPlay above are also experimental, while retaining their unofficial publisher tier.
+[Dummy Device](plugins/dummydevice.json) is an unofficial development/testing plugin that simulates an output device. It controls no physical amplifier. Roon Bridge and AirPlay above are also experimental, while retaining their unofficial publisher tier.
 
 `tier` describes maintenance authority; `maturity` describes readiness. They are independent. Plugin type is separately declared as `input_module` or `output_device`, matching the SDK.
 
