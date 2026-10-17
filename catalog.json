@@ -1352,7 +1352,7 @@
               "Sign in by approving this player at the TIDAL link in plugin settings; Kalinka Player connects automatically. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
               "Maximum audio quality offers Lossless (16-bit / 44.1 kHz) and Max (up to 24-bit / 192 kHz). Plays direct and segmented FLAC, AAC and MP3 streams; TIDAL chooses the codec, and may return AAC for a lossless request. Encrypted streams and Dolby Atmos are refused. TIDAL collections are read-only.",
               "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
-              "This integration uses the unofficial tidalapi client. Automated tests use fake API responses.",
+              "This integration uses the unofficial tidalapi client. Sign-in and playback were verified live with a TIDAL account; automated tests use fake API responses.",
               "To change accounts, turn on Unlink Tidal in plugin settings and apply and restart, then sign in again."
             ],
             "platforms": [
@@ -1535,6 +1535,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "776cc0093a0ea1cdf21b298dcca1b80c89fb11d9",
+  "revision": "6f004af4b9bc385fc301b11bda50094d48737ad8",
   "schema_version": 1
 }
