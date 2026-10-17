@@ -1,5 +1,31 @@
 # TIDAL release verification
 
+## 0.2.1
+
+Verified on 2026-10-17 against the published [TIDAL 0.2.1 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.2.1).
+
+| Field | Verified value |
+| --- | --- |
+| Source tag | `kalinka-plugin-tidal-v0.2.1` |
+| Source commit | `9ed68844a22935f9bd799269516dab12afa33148` |
+| Published at | `2026-10-17T18:39:12Z` |
+| Artifact | `kalinka-plugin-tidal_0.2.1_all.deb` |
+| Size | 32,216 bytes |
+| SHA-256 | `a1df8c39def5b216262b4545f68720772534ea4a6bb9dae278e12e884ffa94a5` |
+| DEB Package / Version / Architecture | `kalinka-plugin-tidal` / `0.2.1` / `all` |
+| Python distribution / version | `kalinka-plugin-tidal` / `0.2.1` |
+| Entry point | `kalinka_plugin_tidal = kalinka_plugin_tidal:KalinkaPluginTidal` |
+
+Downloaded the DEB, `SHA256SUMS`, and `build-info.json`. All three match their GitHub asset sizes and SHA-256 digests and the canonical Debian 13 ARM64 CI artifacts byte for byte. The DEB also matches its checksum file and build metadata, including the tagged source commit.
+
+Inspected native headers, the embedded wheel, dependencies, entry point, trigger and removal script without installing the package or executing its contents. The only payload file is the `py3-none-any` wheel under `/opt/kalinka/wheels/`; its Python modules match the tagged source byte for byte. Dependencies, the trigger and the removal script are unchanged from 0.2.0, as are the repository's packaging files.
+
+The [release workflow](https://github.com/Kalinka-Player/kalinka-plugin-tidal/actions/runs/39058929119) passed all 129 tests on Python 3.11 and 3.13, plus package builds, inspections and packaged-wheel tests on Debian 13 and Ubuntu 24.04, each on ARM64 and amd64. The published package comes from Debian 13 ARM64 with Python 3.13.5.
+
+This release warns in plugin settings when TIDAL ends the session and offers a new sign-in link, checking the session every 10 minutes. An outage of TIDAL's sign-in server, or a track TIDAL refuses to play, no longer interrupts the sign-in. Albums and playlists whose track count includes tracks TIDAL no longer lists are added instead of failing; listed tracks that cannot be streamed are queued and fail when played. Earlier release records and artifact digests are retained unchanged.
+
+These changes are covered by automated tests with fake TIDAL responses; they have not been verified live with a TIDAL account. The stable classification, unofficial tier and manual data rollback policy are unchanged.
+
 ## 0.2.0
 
 Verified on 2026-10-17 against the published [TIDAL 0.2.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.2.0).
