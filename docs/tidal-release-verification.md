@@ -24,7 +24,7 @@ The [release workflow](https://github.com/Kalinka-Player/kalinka-plugin-tidal/ac
 
 This release signs in by device authorisation, adds the Lossless and Max quality choice, plays TIDAL's DASH streams and AAC or MP4 streams through renderer 0.10.0, and lists Home, Explore, Genres and Moods at the root again. Earlier release records and artifact digests are retained unchanged.
 
-Automated tests use fake TIDAL responses, including real manifests run through tidalapi's parser. Encrypted streams and Dolby Atmos are refused. Collections remain read-only. The plugin is now classified stable; the unofficial tier and manual data rollback policy are unchanged.
+Sign-in and playback were verified live with a TIDAL account on 2026-10-17. Automated tests use fake TIDAL responses, including real manifests run through tidalapi's parser. Encrypted streams and Dolby Atmos are refused. Collections remain read-only. The plugin is now classified stable; the unofficial tier and manual data rollback policy are unchanged.
 
 ## 0.1.1
 
