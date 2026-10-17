@@ -12,7 +12,7 @@
   "source": {"repository": "https://github.com/Kalinka-Player/kalinka-plugin-tidal", "subdirectory": ""},
   "type": "input_module",
   "tier": "unofficial",
-  "maturity": "experimental",
+  "maturity": "stable",
   "categories": ["tidal", "streaming", "catalog"],
   "delivery": "independent",
   "releases": [
@@ -40,7 +40,7 @@
           "Sign in with a TIDAL account using the browser link in plugin settings or module status. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
           "Automatically requests CD-quality lossless audio and supports direct unencrypted FLAC and MP3 streams. TIDAL Max / hi-res, segmented DASH, encrypted streams and AAC/MP4 playback are unsupported. TIDAL collections are read-only.",
           "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
-          "This experimental integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified.",
+          "This integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified.",
           "To change accounts, enable Forget TIDAL account on next restart in plugin settings, apply and restart, then follow the sign-in link. The switch resets automatically."
         ]
       },
@@ -98,7 +98,7 @@
           "Sign in with a TIDAL account using the browser link in module status. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
           "Supports direct unencrypted FLAC and MP3 streams. Segmented DASH, encrypted streams and AAC/MP4 playback are unsupported. TIDAL collections are read-only.",
           "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
-          "This experimental integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified."
+          "This integration uses the unofficial tidalapi client. Automated tests use fake API responses; live account sign-in and playback remain unverified."
         ]
       },
       "data_rollback": "manual",

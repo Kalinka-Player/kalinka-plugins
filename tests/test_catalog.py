@@ -66,9 +66,9 @@ class CatalogTests(unittest.TestCase):
                 for text in display_text:
                     self.assertNotRegex(text, r"\bKalinka\b(?! Player\b)")
 
-    def test_only_jamendo_and_localfiles_are_official(self):
+    def test_only_jamendo_localfiles_and_upnp_are_official(self):
         plugins = build_catalog()["plugins"]
-        official = {"jamendo", "localfiles"}
+        official = {"jamendo", "localfiles", "upnp"}
         self.assertEqual({p["id"] for p in plugins if p["tier"] == "official"}, official)
         for plugin in plugins:
             with self.subTest(plugin=plugin["id"]):
