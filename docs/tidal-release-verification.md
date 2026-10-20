@@ -1,5 +1,33 @@
 # TIDAL release verification
 
+## 0.3.0
+
+Verified on 2026-10-20 against the published [TIDAL 0.3.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.3.0).
+
+| Field | Verified value |
+| --- | --- |
+| Source tag | `kalinka-plugin-tidal-v0.3.0` |
+| Source commit | `9cf82d7e1b44e4ea8767ada5d06c974171dc1229` |
+| Published at | `2026-10-20T22:46:37Z` |
+| Artifact | `kalinka-plugin-tidal_0.3.0_all.deb` |
+| Size | 32,680 bytes |
+| SHA-256 | `f32a3bf79344424bbd7141ad535b70dacb5d26b44bec2b2d09205984850237d0` |
+| DEB Package / Version / Architecture | `kalinka-plugin-tidal` / `0.3.0` / `all` |
+| Python distribution / version | `kalinka-plugin-tidal` / `0.3.0` |
+| Entry point | `kalinka_plugin_tidal = kalinka_plugin_tidal:KalinkaPluginTidal` |
+
+Downloaded the DEB, `SHA256SUMS`, and `build-info.json`. All three match their GitHub asset sizes and SHA-256 digests and the canonical Debian 13 ARM64 CI artifacts byte for byte. The DEB also matches its checksum file and build metadata, including the tagged source commit.
+
+Inspected native headers, the embedded wheel, dependencies, entry point, trigger and removal script without installing the package or executing its contents. The only payload file is the `py3-none-any` wheel under `/opt/kalinka/wheels/`; its Python modules match the tagged source byte for byte, apart from the `_version.py` that setuptools-scm writes at build time, which names 0.3.0. The trigger and the removal script are unchanged from 0.2.2. The only dependency change is the plugin SDK floor, raised from 3.11 to 3.14 in the DEB and the wheel alike; among the packaging files only `debian/control.in` and `pyproject.toml` changed, for that floor.
+
+The DEB still declares `kalinka-server (>= 5.11.0)`, but SDK 3.14 first ships with Kalinka Player 5.12.0, so this record requires server 5.12.0 or newer.
+
+The [release workflow](https://github.com/Kalinka-Player/kalinka-plugin-tidal/actions/runs/39510341797) passed all 133 tests on Python 3.11 and 3.13, plus package builds, inspections and packaged-wheel tests on Debian 13 and Ubuntu 24.04, each on ARM64 and amd64. The published package comes from Debian 13 ARM64 with Python 3.13.5.
+
+This release reports `ModuleCapability.CATALOGS`, so the Kalinka app can offer TIDAL as a home source. It asks TIDAL for artist pictures and promotion banners in sizes TIDAL serves, and leaves genre, mood and decade links without images TIDAL does not serve. Earlier release records and artifact digests are retained unchanged.
+
+These changes are covered by automated tests with fake TIDAL responses; they have not been verified live with a TIDAL account. The stable classification, unofficial tier and manual data rollback policy are unchanged.
+
 ## 0.2.2
 
 Verified on 2026-10-17 against the published [TIDAL 0.2.2 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.2.2).
