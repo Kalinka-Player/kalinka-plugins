@@ -621,6 +621,67 @@
               "architectures": [
                 "all"
               ],
+              "filename": "kalinka-plugin-qobuz_5.3.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-qobuz",
+                "version": "5.3.0"
+              },
+              "platform": "linux",
+              "sha256": "441ba90d58ab34094fcf020569c1ccf4f1d5b8d04364fffaae941b472e58827d",
+              "size_bytes": 97204,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/download/kalinka-plugin-qobuz-v5.3.0/kalinka-plugin-qobuz_5.3.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-23T20:58:06Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/tag/kalinka-plugin-qobuz-v5.3.0",
+          "requires": {
+            "architectures": [
+              "all"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.13.0 or newer (below 6.0.0), which brings plugin SDK 3.16, and Python 3.11 or newer.",
+              "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
+              "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+              "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
+              "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.16,<4",
+            "server": ">=5.13,<6"
+          },
+          "source_commit": "2a4d941a1ad57d98954fb6f0a13098ba6c6a252d",
+          "source_tag": "kalinka-plugin-qobuz-v5.3.0",
+          "version": "5.3.0",
+          "withdrawn": false
+        },
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
               "filename": "kalinka-plugin-qobuz_5.2.0_all.deb",
               "format": "deb",
               "package": {
@@ -1848,6 +1909,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "9d9e940e198749830b23290d55d7e9d2b3e3366e",
+  "revision": "56a9797c1fd37689c52bdab6dbe2201bc21b7872",
   "schema_version": 1
 }
