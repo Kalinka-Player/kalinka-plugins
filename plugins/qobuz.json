@@ -4,6 +4,21 @@
   "name": "Qobuz",
   "summary": "Stream Qobuz on {player}, or play to it from the Qobuz app.",
   "description": "Browse and play Qobuz in Kalinka Player, or pick Kalinka Player as a speaker in the Qobuz app with Qobuz Connect. You need a paid Qobuz subscription. Not made or endorsed by Qobuz.",
+  "icons": {
+    "small": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/54020c64a78c3b5328b4059e71ab347114d890f79b66fd4098f4c8585c47ce14.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.0,
+      "min_height": 0.0
+    },
+    "standard": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/36196e01ad0722e52c2075961b58c9418a8c6cb0520f430fbd34c3d3386294e7.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.0,
+      "min_height": 0.0
+    },
+    "monochrome": true
+  },
   "distribution": "kalinka-plugin-qobuz",
   "entry_point": "kalinka_plugin_qobuz",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},

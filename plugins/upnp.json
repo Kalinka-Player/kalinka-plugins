@@ -4,6 +4,21 @@
   "name": "UPnP",
   "summary": "Play to {player} from UPnP apps on your network.",
   "description": "Makes Kalinka Player appear as a UPnP renderer on your network, so UPnP control apps can play through the output selected in Kalinka Player.",
+  "icons": {
+    "small": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/39405083e1a3ddbbe43d2b03f8ce3c7cef91c1c1ee050e78aeb2409b817f2845.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.8571428571428572,
+      "min_height": 0.0
+    },
+    "standard": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/696d3ad38e64279a8d83e805fc4fc8b22235809488741cafebd680b18f032d21.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.0,
+      "min_height": 0.0
+    },
+    "monochrome": true
+  },
   "distribution": "kalinka-plugin-upnp",
   "entry_point": "kalinka_plugin_upnp",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},

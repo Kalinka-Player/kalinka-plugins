@@ -4,6 +4,21 @@
   "name": "Jamendo",
   "summary": "Free music from Jamendo, published under Creative Commons.",
   "description": "Browse and play music from Jamendo, a catalogue of free music published under Creative Commons licences. You can also search it by mood or by describing the music you want.",
+  "icons": {
+    "small": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/adb6b478e454fc0f641c6e9cc84b94b2d19db71666d46ccc2b11264ba228b57d.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 0.8661971800486015,
+      "min_height": 0.0
+    },
+    "standard": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/adb6b478e454fc0f641c6e9cc84b94b2d19db71666d46ccc2b11264ba228b57d.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 0.8661971800486015,
+      "min_height": 0.0
+    },
+    "monochrome": true
+  },
   "distribution": "kalinka-plugin-jamendo",
   "entry_point": "kalinka_plugin_jamendo",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},

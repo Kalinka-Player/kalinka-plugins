@@ -52,6 +52,7 @@ Managed Linux delivery is **native-package-first**. The initial curated distro a
 ## Catalog contract
 
 - One reviewed document per plugin in [`plugins/`](plugins), validated by [`schemas/plugin.schema.json`](schemas/plugin.schema.json).
+- Optional `icons` describes small and standard SVG/PNG URLs, their aspect ratios and minimum heights, and whether clients may render them in black or white. Catalog copies under `assets/icons/` let clients show artwork before installation; installed plugins also package their icons for local use. File names are content hashes, so changed artwork gets a new URL. Brand provenance is recorded in `assets/NOTICE`.
 - Required `type` is copied from the plugin's `PLUGIN_TYPE.value`. Curators verify it; browsing never imports plugin code. After installation, Kalinka Player's detected type remains authoritative.
 - Output devices require `device_support.models`, `families`, and `notes`. At least one model or family must be named, with readable prerequisites and limitations. These names support future search; a family match is not exact-model verification.
 - `categories` contains descriptive search tags, not an alternative type declaration. `delivery` distinguishes bundle-owned and independent packages.

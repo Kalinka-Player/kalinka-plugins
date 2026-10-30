@@ -4,6 +4,21 @@
   "name": "Spotify Connect",
   "summary": "Play from the Spotify app to {player} with Spotify Connect.",
   "description": "Lets you pick Kalinka Player as a speaker in the Spotify app, with Spotify Connect. You need Spotify Premium. Not made or endorsed by Spotify.",
+  "icons": {
+    "small": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/5595afea0e6f009b1dd8529511204d0fd5ca035e49c85409d1697063b3c27a05.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.0479467258601554,
+      "min_height": 21.0
+    },
+    "standard": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/5595afea0e6f009b1dd8529511204d0fd5ca035e49c85409d1697063b3c27a05.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.0479467258601554,
+      "min_height": 21.0
+    },
+    "monochrome": true
+  },
   "distribution": "kalinka-plugin-spotify",
   "entry_point": "kalinka_plugin_spotify",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
