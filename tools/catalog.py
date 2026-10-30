@@ -163,6 +163,9 @@ def validate_plugin(plugin: dict, validator: Draft202012Validator) -> None:
     check_url(plugin["source"]["repository"])
     for person in [plugin["creator"], *plugin["maintainers"]]:
         check_url(person["url"])
+    for icon in (plugin.get("icons", {}).get(size) for size in ("small", "standard")):
+        if icon is not None:
+            check_url(icon["url"])
     subdirectory = plugin["source"]["subdirectory"]
     if subdirectory and (
         subdirectory.startswith("/")

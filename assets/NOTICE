@@ -1,0 +1,24 @@
+Plugin artwork
+--------------
+The SVGs in icons/ are named by their SHA-256 content hash. The matching
+plugins/*.json entries identify each source and its two variants.
+
+Qobuz: the circular Q paths from qobuz_logo_spinner in
+https://www.qobuz.com/assets-static/build/images/logos.dbcc769d.svg
+The three white logo paths are preserved, rendered black on transparency,
+without the spinner background or outline.
+
+Spotify: the unmodified Primary_Logo_Black_RGB.svg from the icon download at
+https://developer.spotify.com/documentation/design#using-our-logo
+
+Jamendo: the unmodified icon paths from the white logo at
+https://images.jamendo.com/jamendomusic/static/svg/jamendo-music-logo-white.svg
+The icon is presented separately from its wordmark.
+
+These brand assets were retrieved on 2026-10-30. Artwork and trademarks
+remain the property of their respective owners; listing them does not
+license them under this repository's GPL or imply endorsement.
+
+UPnP: original Kalinka artwork, GPL-3.0-or-later, copied from
+KalinkaPlayer/packages/kalinka-plugin-upnp/src/kalinka_plugin_upnp/icons/.
+This is a generic text mark, not the UPnP certification logo.

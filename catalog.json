@@ -494,6 +494,21 @@
       "description": "Browse and play music from Jamendo, a catalogue of free music published under Creative Commons licences. You can also search it by mood or by describing the music you want.",
       "distribution": "kalinka-plugin-jamendo",
       "entry_point": "kalinka_plugin_jamendo",
+      "icons": {
+        "monochrome": true,
+        "small": {
+          "aspect_ratio": 0.8661971800486015,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/adb6b478e454fc0f641c6e9cc84b94b2d19db71666d46ccc2b11264ba228b57d.svg"
+        },
+        "standard": {
+          "aspect_ratio": 0.8661971800486015,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/adb6b478e454fc0f641c6e9cc84b94b2d19db71666d46ccc2b11264ba228b57d.svg"
+        }
+      },
       "id": "jamendo",
       "license": "GPL-3.0-or-later",
       "maintainers": [
@@ -604,6 +619,21 @@
       "description": "Browse and play Qobuz in Kalinka Player, or pick Kalinka Player as a speaker in the Qobuz app with Qobuz Connect. You need a paid Qobuz subscription. Not made or endorsed by Qobuz.",
       "distribution": "kalinka-plugin-qobuz",
       "entry_point": "kalinka_plugin_qobuz",
+      "icons": {
+        "monochrome": true,
+        "small": {
+          "aspect_ratio": 1.0,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/54020c64a78c3b5328b4059e71ab347114d890f79b66fd4098f4c8585c47ce14.svg"
+        },
+        "standard": {
+          "aspect_ratio": 1.0,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/36196e01ad0722e52c2075961b58c9418a8c6cb0520f430fbd34c3d3386294e7.svg"
+        }
+      },
       "id": "qobuz",
       "license": "Apache-2.0",
       "maintainers": [
@@ -1163,6 +1193,21 @@
       "description": "Lets you pick Kalinka Player as a speaker in the Spotify app, with Spotify Connect. You need Spotify Premium. Not made or endorsed by Spotify.",
       "distribution": "kalinka-plugin-spotify",
       "entry_point": "kalinka_plugin_spotify",
+      "icons": {
+        "monochrome": true,
+        "small": {
+          "aspect_ratio": 1.0479467258601554,
+          "mime_type": "image/svg+xml",
+          "min_height": 21.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/5595afea0e6f009b1dd8529511204d0fd5ca035e49c85409d1697063b3c27a05.svg"
+        },
+        "standard": {
+          "aspect_ratio": 1.0479467258601554,
+          "mime_type": "image/svg+xml",
+          "min_height": 21.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/5595afea0e6f009b1dd8529511204d0fd5ca035e49c85409d1697063b3c27a05.svg"
+        }
+      },
       "id": "spotify",
       "license": "MIT",
       "maintainers": [
@@ -1949,6 +1994,21 @@
       "description": "Makes Kalinka Player appear as a UPnP renderer on your network, so UPnP control apps can play through the output selected in Kalinka Player.",
       "distribution": "kalinka-plugin-upnp",
       "entry_point": "kalinka_plugin_upnp",
+      "icons": {
+        "monochrome": true,
+        "small": {
+          "aspect_ratio": 1.8571428571428572,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/39405083e1a3ddbbe43d2b03f8ce3c7cef91c1c1ee050e78aeb2409b817f2845.svg"
+        },
+        "standard": {
+          "aspect_ratio": 1.0,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/696d3ad38e64279a8d83e805fc4fc8b22235809488741cafebd680b18f032d21.svg"
+        }
+      },
       "id": "upnp",
       "license": "GPL-3.0-or-later",
       "maintainers": [
@@ -1970,6 +2030,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "bb266b679bdd771be14d8da0020155faf09b8005",
+  "revision": "8d69bd8e1b0d407e9be626b4c1bd00799b65714c",
   "schema_version": 1
 }

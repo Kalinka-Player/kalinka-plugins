@@ -1,6 +1,7 @@
 """Contract checks for catalog metadata and release artifact selection inputs."""
 
 import copy
+import hashlib
 import json
 from pathlib import Path
 import shutil
@@ -53,6 +54,44 @@ class CatalogTests(unittest.TestCase):
         published = read_json(ROOT / "catalog.json")
         self.assertEqual(published, build_catalog(revision=published["revision"]))
         self.assertEqual(published["catalog_id"], "kalinka")
+
+    def test_catalog_artwork_urls_match_packaged_content_hashes(self):
+        base = "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/"
+        plugins = [p for p in build_catalog()["plugins"] if "icons" in p]
+        self.assertEqual({p["id"] for p in plugins}, {"qobuz", "spotify", "jamendo", "upnp"})
+        for plugin in plugins:
+            for variant in ("small", "standard"):
+                with self.subTest(plugin=plugin["id"], variant=variant):
+                    icon = plugin["icons"][variant]
+                    self.assertTrue(icon["url"].startswith(base))
+                    path = ROOT / icon["url"][len(base):]
+                    self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), path.stem)
+                    self.assertLessEqual(path.stat().st_size, 256 * 1024)
+
+    def test_artwork_requires_both_sizes_and_public_https_urls(self):
+        icon = {"url": "https://example.org/icon.svg", "mime_type": "image/svg+xml"}
+        self.plugin["icons"] = {"small": icon, "standard": dict(icon), "monochrome": True}
+        self.validate()
+        self.plugin["icons"]["standard"]["url"] = "/server/icon.svg"
+        with self.assertRaises(ValidationError):
+            self.validate()
+        del self.plugin["icons"]["standard"]
+        with self.assertRaises(ValidationError):
+            self.validate()
+
+    def test_artwork_urls_obey_the_public_feed_url_rules(self):
+        icon = {"url": "https://example.org/icon.svg", "mime_type": "image/svg+xml"}
+        self.plugin["icons"] = {"small": icon, "standard": dict(icon)}
+        for url in (
+            "https://user:password@example.org/icon.svg",
+            "https://example.org/icon.svg?token=test",
+            "https://example.org/../icon.svg",
+            "https://example.org:8443/icon.svg",
+        ):
+            with self.subTest(url=url):
+                icon["url"] = url
+                with self.assertRaises(ValueError):
+                    self.validate()
 
     def test_catalog_display_text_uses_full_product_name(self):
         for plugin in build_catalog()["plugins"]:
