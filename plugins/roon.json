@@ -4,6 +4,21 @@
   "name": "Roon Bridge",
   "summary": "Use {player} as an audio output in Roon.",
   "description": "Runs Roon Bridge on the server, so Roon can play to the DAC connected to it. Kalinka Player shows what Roon is playing, with cover art and progress. You need a Roon Server and a Roon subscription. Roon Bridge is downloaded from Roon Labs when you turn the plugin on. Not Roon Ready certified or endorsed by Roon Labs.",
+  "icons": {
+    "small": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/1f4ad7d9dedf53948f109aeef453c1f716fd36ff63d40695036ef5784b7adbc4.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 3.3865313653136533,
+      "min_height": 0.0
+    },
+    "standard": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/1f4ad7d9dedf53948f109aeef453c1f716fd36ff63d40695036ef5784b7adbc4.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 3.3865313653136533,
+      "min_height": 0.0
+    },
+    "monochrome": true
+  },
   "distribution": "kalinka-plugin-roon",
   "entry_point": "kalinka_plugin_roon",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
