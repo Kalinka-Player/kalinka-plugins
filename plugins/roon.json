@@ -32,6 +32,43 @@
   "delivery": "independent",
   "releases": [
     {
+      "version": "0.3.0",
+      "channel": "stable",
+      "published_at": "2026-10-31T17:42:32Z",
+      "source_tag": "kalinka-plugin-roon-v0.3.0",
+      "source_commit": "825cf0894ae1de2acd9ddbeda71c752948aa7f9c",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-roon/releases/tag/kalinka-plugin-roon-v0.3.0",
+      "requires": {
+        "server": ">=5.16,<6",
+        "sdk": ">=3.18,<4",
+        "python": ">=3.11",
+        "platforms": ["linux"],
+        "architectures": ["x86_64", "aarch64", "armv7l"],
+        "capabilities": [],
+        "notes": [
+          "A Roon Server and a Roon subscription are required. Enabling the plugin downloads Roon Labs' proprietary Roon Bridge for this machine, or attaches to the audio endpoint of a Roon Server already running on it; this integration is not Roon Ready certified or endorsed by Roon Labs.",
+          "Requires Kalinka Player server 5.16.0 or newer (below 6.0.0), which brings SDK 3.18 and the external playback API. The package depends on Node.js 18 or newer, which apt installs with it.",
+          "Roon plays straight to the server's local DAC and bypasses the Kalinka Player renderer; Kalinka Player shows what plays, keeps Roon's session across pause, and its volume slider controls the Roon output.",
+          "Initial distro allowlist is conservative: Debian 13 and Ubuntu 24.04. Derivatives must match an explicitly listed OS identity."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-roon_0.3.0_all.deb",
+          "platform": "linux",
+          "architectures": ["all"],
+          "package": {"name": "kalinka-plugin-roon", "version": "0.3.0", "architecture": "all"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-roon/releases/download/kalinka-plugin-roon-v0.3.0/kalinka-plugin-roon_0.3.0_all.deb",
+          "sha256": "a46820e4b9c441f22f9018ef04f7f19c2b27b3bf599448548d34ee0a22a9164b",
+          "size_bytes": 464980
+        }
+      ]
+    },
+    {
       "version": "0.2.0",
       "channel": "stable",
       "published_at": "2026-10-12T22:26:44Z",

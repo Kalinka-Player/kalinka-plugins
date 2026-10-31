@@ -651,6 +651,67 @@
               "architectures": [
                 "all"
               ],
+              "filename": "kalinka-plugin-qobuz_5.4.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-qobuz",
+                "version": "5.4.0"
+              },
+              "platform": "linux",
+              "sha256": "a8d66b5a3e0ed2d00f0935020485686d9754143754876c13cd6bb7c3e205f055",
+              "size_bytes": 100870,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/download/kalinka-plugin-qobuz-v5.4.0/kalinka-plugin-qobuz_5.4.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-31T17:42:22Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/tag/kalinka-plugin-qobuz-v5.4.0",
+          "requires": {
+            "architectures": [
+              "all"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.16.0 or newer (below 6.0.0), which brings plugin SDK 3.18, and Python 3.11 or newer.",
+              "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
+              "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+              "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
+              "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.18,<4",
+            "server": ">=5.16,<6"
+          },
+          "source_commit": "b9be73e10a6c5c315b2278ab6d44c3a688a81c5a",
+          "source_tag": "kalinka-plugin-qobuz-v5.4.0",
+          "version": "5.4.0",
+          "withdrawn": false
+        },
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
               "filename": "kalinka-plugin-qobuz_5.3.1_all.deb",
               "format": "deb",
               "package": {
@@ -1066,6 +1127,68 @@
               "architectures": [
                 "all"
               ],
+              "filename": "kalinka-plugin-roon_0.3.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-roon",
+                "version": "0.3.0"
+              },
+              "platform": "linux",
+              "sha256": "a46820e4b9c441f22f9018ef04f7f19c2b27b3bf599448548d34ee0a22a9164b",
+              "size_bytes": 464980,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-roon/releases/download/kalinka-plugin-roon-v0.3.0/kalinka-plugin-roon_0.3.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-31T17:42:32Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-roon/releases/tag/kalinka-plugin-roon-v0.3.0",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64",
+              "armv7l"
+            ],
+            "capabilities": [],
+            "notes": [
+              "A Roon Server and a Roon subscription are required. Enabling the plugin downloads Roon Labs' proprietary Roon Bridge for this machine, or attaches to the audio endpoint of a Roon Server already running on it; this integration is not Roon Ready certified or endorsed by Roon Labs.",
+              "Requires Kalinka Player server 5.16.0 or newer (below 6.0.0), which brings SDK 3.18 and the external playback API. The package depends on Node.js 18 or newer, which apt installs with it.",
+              "Roon plays straight to the server's local DAC and bypasses the Kalinka Player renderer; Kalinka Player shows what plays, keeps Roon's session across pause, and its volume slider controls the Roon output.",
+              "Initial distro allowlist is conservative: Debian 13 and Ubuntu 24.04. Derivatives must match an explicitly listed OS identity."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.18,<4",
+            "server": ">=5.16,<6"
+          },
+          "source_commit": "825cf0894ae1de2acd9ddbeda71c752948aa7f9c",
+          "source_tag": "kalinka-plugin-roon-v0.3.0",
+          "version": "0.3.0",
+          "withdrawn": false
+        },
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
               "filename": "kalinka-plugin-roon_0.2.0_all.deb",
               "format": "deb",
               "package": {
@@ -1234,6 +1357,145 @@
       "maturity": "stable",
       "name": "Spotify Connect",
       "releases": [
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "aarch64"
+              ],
+              "filename": "kalinka-plugin-spotify-0.3.0-1.fc44.aarch64.rpm",
+              "format": "rpm",
+              "package": {
+                "architecture": "aarch64",
+                "name": "kalinka-plugin-spotify",
+                "version": "0:0.3.0-1.fc44"
+              },
+              "platform": "linux",
+              "sha256": "a19b12f8e1c4859331567ac90258247eb21a16bc464682e19a46e0ca73aabb25",
+              "size_bytes": 4236375,
+              "targets": [
+                {
+                  "id": "fedora",
+                  "versions": [
+                    "44"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify-0.3.0-1.fc44.aarch64.rpm"
+            },
+            {
+              "architectures": [
+                "x86_64"
+              ],
+              "filename": "kalinka-plugin-spotify-0.3.0-1.fc44.x86_64.rpm",
+              "format": "rpm",
+              "package": {
+                "architecture": "x86_64",
+                "name": "kalinka-plugin-spotify",
+                "version": "0:0.3.0-1.fc44"
+              },
+              "platform": "linux",
+              "sha256": "584663d0b74c828a9e9de6abae49ec5c8ab597d68709db0c4640d67bfac249c4",
+              "size_bytes": 4455296,
+              "targets": [
+                {
+                  "id": "fedora",
+                  "versions": [
+                    "44"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify-0.3.0-1.fc44.x86_64.rpm"
+            },
+            {
+              "architectures": [
+                "x86_64"
+              ],
+              "filename": "kalinka-plugin-spotify_0.3.0_amd64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "amd64",
+                "name": "kalinka-plugin-spotify",
+                "version": "0.3.0"
+              },
+              "platform": "linux",
+              "sha256": "00dd2f30713d0579edba7872d27fe071e313724633aeaf7e35869b316cc26fb1",
+              "size_bytes": 4084332,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify_0.3.0_amd64.deb"
+            },
+            {
+              "architectures": [
+                "aarch64"
+              ],
+              "filename": "kalinka-plugin-spotify_0.3.0_arm64.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "arm64",
+                "name": "kalinka-plugin-spotify",
+                "version": "0.3.0"
+              },
+              "platform": "linux",
+              "sha256": "7f2b6d9dc4241e6308071994153b6dd69e6282cafe2576463668eb2d5c0dd5b3",
+              "size_bytes": 3660636,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify_0.3.0_arm64.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-31T17:50:07Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/tag/kalinka-plugin-spotify-v0.3.0",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Spotify Premium is required. The packages include Kalinka Player's patched librespot executable.",
+              "Requires Kalinka Player server 5.16.0 or newer (below 6.0.0), which brings plugin SDK 3.18, and renderer 0.5.0 or newer (below 1.0.0). Updating only the SDK is insufficient.",
+              "Initial distro allowlist is conservative: Debian 13, Ubuntu 24.04 and Fedora 44. Derivatives must match an explicitly listed OS identity; a 64-bit CPU with a 32-bit userspace does not qualify."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "renderer": ">=0.5,<1",
+            "sdk": ">=3.18,<4",
+            "server": ">=5.16,<6"
+          },
+          "source_commit": "5fa44a172b16668997904d50d00e323c0f4ab345",
+          "source_tag": "kalinka-plugin-spotify-v0.3.0",
+          "version": "0.3.0",
+          "withdrawn": false
+        },
         {
           "artifacts": [
             {
@@ -1562,6 +1824,69 @@
       "maturity": "stable",
       "name": "TIDAL",
       "releases": [
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
+              "filename": "kalinka-plugin-tidal_0.5.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-tidal",
+                "version": "0.5.0"
+              },
+              "platform": "linux",
+              "sha256": "d5bb5245a54a49b54fc13e9bca7815e3e44af56edce49380ab8d945e8c77547f",
+              "size_bytes": 35492,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/download/kalinka-plugin-tidal-v0.5.0/kalinka-plugin-tidal_0.5.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-10-31T17:43:17Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.5.0",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.16.0 or newer (below 6), which brings plugin SDK 3.18, and Python 3.11 or newer. AAC, MP4 and segmented streams play on renderer 0.10.0 or newer.",
+              "Sign in by approving this player at the TIDAL link in plugin settings; Kalinka Player connects automatically. If TIDAL ends the session, plugin settings warn that the sign-in expired and offer a new link. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
+              "Maximum audio quality offers Lossless (16-bit / 44.1 kHz) and Max (up to 24-bit / 192 kHz). Plays direct and segmented FLAC, AAC and MP3 streams; TIDAL chooses the codec, and may return AAC for a lossless request. Encrypted streams and Dolby Atmos are refused. TIDAL collections are read-only.",
+              "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
+              "This integration uses the unofficial tidalapi client. Automated tests use fake API responses.",
+              "To change accounts, turn on Unlink Tidal in plugin settings and apply and restart, then sign in again."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.18,<4",
+            "server": ">=5.16.0,<6"
+          },
+          "source_commit": "faa50ff7298f2762212c408301a13d8a8461aa2c",
+          "source_tag": "kalinka-plugin-tidal-v0.5.0",
+          "version": "0.5.0",
+          "withdrawn": false
+        },
         {
           "artifacts": [
             {
@@ -2060,6 +2385,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "405f62d1c3cd04e5cf5e1c3a7bd3480df1ceb4d9",
+  "revision": "83e22f02904c9fa5115ca15d40f3e95785ac068a",
   "schema_version": 1
 }

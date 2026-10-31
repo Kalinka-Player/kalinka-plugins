@@ -185,7 +185,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_seed_requirements_use_versions_not_source_commits(self):
         entries = {p["id"]: p for p in build_catalog()["plugins"]}
-        spotify = entries["spotify"]["releases"][0]
+        spotify = entries["spotify"]["releases"][-1]
         self.assertEqual(spotify["requires"]["server"], ">=5.3,<6")
         self.assertEqual(spotify["requires"]["renderer"], ">=0.5,<1")
         for plugin in entries.values():
@@ -482,7 +482,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_native_filename_must_match_package_identity(self):
         self.native_example()
-        self.artifact["package"]["version"] = "0.3.0"
+        self.artifact["package"]["version"] = "9.9.9"
         with self.assertRaisesRegex(ValueError, "filename"):
             self.validate()
 

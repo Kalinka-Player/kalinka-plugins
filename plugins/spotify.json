@@ -32,6 +32,76 @@
   "delivery": "independent",
   "releases": [
     {
+      "version": "0.3.0",
+      "channel": "stable",
+      "published_at": "2026-10-31T17:50:07Z",
+      "source_tag": "kalinka-plugin-spotify-v0.3.0",
+      "source_commit": "5fa44a172b16668997904d50d00e323c0f4ab345",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/tag/kalinka-plugin-spotify-v0.3.0",
+      "requires": {
+        "server": ">=5.16,<6",
+        "sdk": ">=3.18,<4",
+        "python": ">=3.11",
+        "renderer": ">=0.5,<1",
+        "platforms": ["linux"],
+        "architectures": ["x86_64", "aarch64"],
+        "capabilities": [],
+        "notes": [
+          "Spotify Premium is required. The packages include Kalinka Player's patched librespot executable.",
+          "Requires Kalinka Player server 5.16.0 or newer (below 6.0.0), which brings plugin SDK 3.18, and renderer 0.5.0 or newer (below 1.0.0). Updating only the SDK is insufficient.",
+          "Initial distro allowlist is conservative: Debian 13, Ubuntu 24.04 and Fedora 44. Derivatives must match an explicitly listed OS identity; a 64-bit CPU with a 32-bit userspace does not qualify."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-spotify_0.3.0_amd64.deb",
+          "platform": "linux",
+          "architectures": ["x86_64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0.3.0", "architecture": "amd64"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify_0.3.0_amd64.deb",
+          "sha256": "00dd2f30713d0579edba7872d27fe071e313724633aeaf7e35869b316cc26fb1",
+          "size_bytes": 4084332
+        },
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-spotify_0.3.0_arm64.deb",
+          "platform": "linux",
+          "architectures": ["aarch64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0.3.0", "architecture": "arm64"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify_0.3.0_arm64.deb",
+          "sha256": "7f2b6d9dc4241e6308071994153b6dd69e6282cafe2576463668eb2d5c0dd5b3",
+          "size_bytes": 3660636
+        },
+        {
+          "format": "rpm",
+          "filename": "kalinka-plugin-spotify-0.3.0-1.fc44.x86_64.rpm",
+          "platform": "linux",
+          "architectures": ["x86_64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0:0.3.0-1.fc44", "architecture": "x86_64"},
+          "targets": [{"id": "fedora", "versions": ["44"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify-0.3.0-1.fc44.x86_64.rpm",
+          "sha256": "584663d0b74c828a9e9de6abae49ec5c8ab597d68709db0c4640d67bfac249c4",
+          "size_bytes": 4455296
+        },
+        {
+          "format": "rpm",
+          "filename": "kalinka-plugin-spotify-0.3.0-1.fc44.aarch64.rpm",
+          "platform": "linux",
+          "architectures": ["aarch64"],
+          "package": {"name": "kalinka-plugin-spotify", "version": "0:0.3.0-1.fc44", "architecture": "aarch64"},
+          "targets": [{"id": "fedora", "versions": ["44"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-spotify/releases/download/kalinka-plugin-spotify-v0.3.0/kalinka-plugin-spotify-0.3.0-1.fc44.aarch64.rpm",
+          "sha256": "a19b12f8e1c4859331567ac90258247eb21a16bc464682e19a46e0ca73aabb25",
+          "size_bytes": 4236375
+        }
+      ]
+    },
+    {
       "version": "0.2.2",
       "channel": "stable",
       "published_at": "2026-10-06T21:26:06Z",

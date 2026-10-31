@@ -32,6 +32,44 @@
   "delivery": "independent",
   "releases": [
     {
+      "version": "5.4.0",
+      "channel": "stable",
+      "published_at": "2026-10-31T17:42:22Z",
+      "source_tag": "kalinka-plugin-qobuz-v5.4.0",
+      "source_commit": "b9be73e10a6c5c315b2278ab6d44c3a688a81c5a",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/tag/kalinka-plugin-qobuz-v5.4.0",
+      "requires": {
+        "server": ">=5.16,<6",
+        "sdk": ">=3.18,<4",
+        "python": ">=3.11",
+        "platforms": ["linux"],
+        "architectures": ["all"],
+        "capabilities": [],
+        "notes": [
+          "Requires Kalinka Player server 5.16.0 or newer (below 6.0.0), which brings plugin SDK 3.18, and Python 3.11 or newer.",
+          "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
+          "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+          "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
+          "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-qobuz_5.4.0_all.deb",
+          "platform": "linux",
+          "architectures": ["all"],
+          "package": {"name": "kalinka-plugin-qobuz", "version": "5.4.0", "architecture": "all"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/download/kalinka-plugin-qobuz-v5.4.0/kalinka-plugin-qobuz_5.4.0_all.deb",
+          "sha256": "a8d66b5a3e0ed2d00f0935020485686d9754143754876c13cd6bb7c3e205f055",
+          "size_bytes": 100870
+        }
+      ]
+    },
+    {
       "version": "5.3.1",
       "channel": "stable",
       "published_at": "2026-10-30T00:34:46Z",
