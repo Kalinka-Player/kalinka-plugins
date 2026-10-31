@@ -58,7 +58,7 @@ class CatalogTests(unittest.TestCase):
     def test_catalog_artwork_urls_match_packaged_content_hashes(self):
         base = "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/"
         plugins = [p for p in build_catalog()["plugins"] if "icons" in p]
-        self.assertEqual({p["id"] for p in plugins}, {"qobuz", "spotify", "jamendo", "upnp", "roon"})
+        self.assertEqual({p["id"] for p in plugins}, {"qobuz", "spotify", "jamendo", "upnp", "roon", "tidal"})
         for plugin in plugins:
             for variant in ("small", "standard"):
                 with self.subTest(plugin=plugin["id"], variant=variant):

@@ -27,3 +27,9 @@ Roon: the plain wordmark from the header of https://roon.app/en/press
 (retrieved 2026-10-31). Paths, stroke and viewBox are preserved; website
 attributes were removed and an SVG namespace and title were added. This
 is source attribution, not a Roon Ready, Roon Tested or certification badge.
+
+TIDAL: vector conversion of Logo/TIDAL Icon/RGB/EPS/icon-black-rgb.eps
+from https://assets.tidal.com/press/TIDAL-Logo%26Fonts-2021Q4.zip
+(retrieved 2026-10-30, converted 2026-10-31). Diamond paths and proportions
+are preserved and rendered in black or white for compact app attribution.
+https://developer.tidal.com/documentation/guidelines/guidelines-design-guidelines

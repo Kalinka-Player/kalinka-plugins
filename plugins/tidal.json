@@ -4,6 +4,21 @@
   "name": "TIDAL",
   "summary": "Browse and play TIDAL on {player}.",
   "description": "Browse TIDAL Home, Explore, Genres, Moods, your mixes and your collection, search for music, and play supported streams in Kalinka Player. Sign in with your TIDAL account; playback requires a subscription. Uses the unofficial tidalapi client and is not made or endorsed by TIDAL.",
+  "icons": {
+    "small": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/be899afff0191a88cc01bc0b23e06738d357f0844065568bed5ef30c4d7ba335.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.49994708434755,
+      "min_height": 0.0
+    },
+    "standard": {
+      "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/be899afff0191a88cc01bc0b23e06738d357f0844065568bed5ef30c4d7ba335.svg",
+      "mime_type": "image/svg+xml",
+      "aspect_ratio": 1.49994708434755,
+      "min_height": 0.0
+    },
+    "monochrome": true
+  },
   "distribution": "kalinka-plugin-tidal",
   "entry_point": "kalinka_plugin_tidal",
   "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},

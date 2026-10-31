@@ -1536,6 +1536,21 @@
       "description": "Browse TIDAL Home, Explore, Genres, Moods, your mixes and your collection, search for music, and play supported streams in Kalinka Player. Sign in with your TIDAL account; playback requires a subscription. Uses the unofficial tidalapi client and is not made or endorsed by TIDAL.",
       "distribution": "kalinka-plugin-tidal",
       "entry_point": "kalinka_plugin_tidal",
+      "icons": {
+        "monochrome": true,
+        "small": {
+          "aspect_ratio": 1.49994708434755,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/be899afff0191a88cc01bc0b23e06738d357f0844065568bed5ef30c4d7ba335.svg"
+        },
+        "standard": {
+          "aspect_ratio": 1.49994708434755,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/be899afff0191a88cc01bc0b23e06738d357f0844065568bed5ef30c4d7ba335.svg"
+        }
+      },
       "id": "tidal",
       "license": "GPL-3.0-or-later",
       "maintainers": [
@@ -2045,6 +2060,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "98d932217338c81cdd204519b85ccfbc05f57ab8",
+  "revision": "405f62d1c3cd04e5cf5e1c3a7bd3480df1ceb4d9",
   "schema_version": 1
 }
