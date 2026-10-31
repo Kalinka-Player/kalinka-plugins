@@ -1034,6 +1034,21 @@
       "description": "Runs Roon Bridge on the server, so Roon can play to the DAC connected to it. Kalinka Player shows what Roon is playing, with cover art and progress. You need a Roon Server and a Roon subscription. Roon Bridge is downloaded from Roon Labs when you turn the plugin on. Not Roon Ready certified or endorsed by Roon Labs.",
       "distribution": "kalinka-plugin-roon",
       "entry_point": "kalinka_plugin_roon",
+      "icons": {
+        "monochrome": true,
+        "small": {
+          "aspect_ratio": 3.3865313653136533,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/1f4ad7d9dedf53948f109aeef453c1f716fd36ff63d40695036ef5784b7adbc4.svg"
+        },
+        "standard": {
+          "aspect_ratio": 3.3865313653136533,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/1f4ad7d9dedf53948f109aeef453c1f716fd36ff63d40695036ef5784b7adbc4.svg"
+        }
+      },
       "id": "roon",
       "license": "GPL-3.0-or-later",
       "maintainers": [
@@ -2030,6 +2045,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "8d69bd8e1b0d407e9be626b4c1bd00799b65714c",
+  "revision": "98d932217338c81cdd204519b85ccfbc05f57ab8",
   "schema_version": 1
 }

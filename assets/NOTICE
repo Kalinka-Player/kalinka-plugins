@@ -22,3 +22,8 @@ license them under this repository's GPL or imply endorsement.
 UPnP: original Kalinka artwork, GPL-3.0-or-later, copied from
 KalinkaPlayer/packages/kalinka-plugin-upnp/src/kalinka_plugin_upnp/icons/.
 This is a generic text mark, not the UPnP certification logo.
+
+Roon: the plain wordmark from the header of https://roon.app/en/press
+(retrieved 2026-10-31). Paths, stroke and viewBox are preserved; website
+attributes were removed and an SVG namespace and title were added. This
+is source attribution, not a Roon Ready, Roon Tested or certification badge.
