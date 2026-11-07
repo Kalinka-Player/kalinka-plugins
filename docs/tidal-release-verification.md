@@ -1,5 +1,33 @@
 # TIDAL release verification
 
+## 0.6.0
+
+Verified on 2026-11-07 against the published [TIDAL 0.6.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.6.0).
+
+| Field | Verified value |
+| --- | --- |
+| Source tag | `kalinka-plugin-tidal-v0.6.0` |
+| Source commit | `4192ea8125eda5023fd50c11f7f6d77a4363f5ae` |
+| Published at | `2026-11-07T02:44:54Z` |
+| Artifact | `kalinka-plugin-tidal_0.6.0_all.deb` |
+| Size | 36,276 bytes |
+| SHA-256 | `ccabf116884cf0916ed9ffc144395249740b4e29f2d6001d5fad4268e0149a3c` |
+| DEB Package / Version / Architecture | `kalinka-plugin-tidal` / `0.6.0` / `all` |
+| Python distribution / version | `kalinka-plugin-tidal` / `0.6.0` |
+| Entry point | `kalinka_plugin_tidal = kalinka_plugin_tidal:KalinkaPluginTidal` |
+
+Downloaded the DEB, `SHA256SUMS`, and `build-info.json`. All three match their GitHub asset sizes and SHA-256 digests, and the DEB matches its checksum file and build metadata, including the tagged source commit.
+
+Inspected native headers, the embedded wheel, dependencies, entry point, trigger and removal script without installing the package or executing its contents. The only payload file is the `py3-none-any` wheel under `/opt/kalinka/wheels/`; its Python modules and the packaged `icons/tidal.svg` match the tagged source byte for byte, apart from the `_version.py` that setuptools-scm writes at build time, which names 0.6.0. The trigger and the removal script are unchanged from 0.5.0. The only dependency change is the plugin SDK floor, raised from 3.18 to 3.19 in the DEB and the wheel alike; among the packaging files only `debian/control.in`, `pyproject.toml` and the package check changed, for that floor.
+
+The DEB still declares `kalinka-server (>= 5.11.0)`, but SDK 3.19 first ships with Kalinka Player 5.17.0, so this record requires server 5.17.0 or newer.
+
+The [release workflow](https://github.com/Kalinka-Player/kalinka-plugin-tidal/actions/runs/42330632156) passed all 179 tests on Python 3.11 and 3.13, plus package builds, inspections and packaged-wheel tests on Debian 13 and Ubuntu 24.04, each on ARM64 and amd64. The published package comes from Debian 13 ARM64 with Python 3.13.5.
+
+This release reports the encoded audio codec (FLAC, AAC or MP3) separately from the container or manifest type: direct streams derive it from TIDAL's own codec string, and DASH streams derive it from the MPD's selected `codecs` attribute, mirroring the renderer's own demuxer logic. The codec travels through the SDK's `TrackSource.audio_codec` / `PlaybackState.audio_codec` field, never through `format`/`mime_type`, which keeps selecting the renderer's decoder. Unknown codecs are left unset, so the app falls back to the source format as before. Earlier release records and artifact digests are retained unchanged.
+
+These changes are covered by automated tests with fake TIDAL responses; they have not been verified live with a TIDAL account. The stable classification, unofficial tier and manual data rollback policy are unchanged.
+
 ## 0.5.0
 
 Verified on 2026-10-31 against the published [TIDAL 0.5.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.5.0).

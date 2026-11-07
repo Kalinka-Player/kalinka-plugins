@@ -1862,6 +1862,70 @@
               "architectures": [
                 "all"
               ],
+              "filename": "kalinka-plugin-tidal_0.6.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-tidal",
+                "version": "0.6.0"
+              },
+              "platform": "linux",
+              "sha256": "ccabf116884cf0916ed9ffc144395249740b4e29f2d6001d5fad4268e0149a3c",
+              "size_bytes": 36276,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/download/kalinka-plugin-tidal-v0.6.0/kalinka-plugin-tidal_0.6.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-11-07T02:44:54Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.6.0",
+          "requires": {
+            "architectures": [
+              "x86_64",
+              "aarch64"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.17.0 or newer (below 6), which brings plugin SDK 3.19, and Python 3.11 or newer. AAC, MP4 and segmented streams play on renderer 0.10.0 or newer.",
+              "Sign in by approving this player at the TIDAL link in plugin settings; Kalinka Player connects automatically. If TIDAL ends the session, plugin settings warn that the sign-in expired and offer a new link. Playback requires a TIDAL streaming subscription; availability depends on the account and region.",
+              "Maximum audio quality offers Lossless (16-bit / 44.1 kHz) and Max (up to 24-bit / 192 kHz). Plays direct and segmented FLAC, AAC and MP3 streams; TIDAL chooses the codec, and may return AAC for a lossless request. Encrypted streams and Dolby Atmos are refused. TIDAL collections are read-only.",
+              "The plugin reports the encoded audio codec separately from the container or manifest type, so Kalinka Player 5.17.0+ can forward it to a compatible app's Now Playing display instead of MP4 or DASH. Unknown codecs are left unset, falling back to the source format as before.",
+              "The architecture-independent DEB is built and tested on Debian 13 and Ubuntu 24.04 for ARM64 and amd64. A compatible Debian-packaged Kalinka Player server and resolvable Python dependencies are required.",
+              "This integration uses the unofficial tidalapi client. Automated tests use fake API responses.",
+              "To change accounts, turn on Unlink Tidal in plugin settings and apply and restart, then sign in again."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.19,<4",
+            "server": ">=5.17.0,<6"
+          },
+          "source_commit": "4192ea8125eda5023fd50c11f7f6d77a4363f5ae",
+          "source_tag": "kalinka-plugin-tidal-v0.6.0",
+          "version": "0.6.0",
+          "withdrawn": false
+        },
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
               "filename": "kalinka-plugin-tidal_0.5.0_all.deb",
               "format": "deb",
               "package": {
@@ -2417,6 +2481,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "83e22f02904c9fa5115ca15d40f3e95785ac068a",
+  "revision": "41b8f512b31deb2c9304182da6ba46ad83608d0b",
   "schema_version": 1
 }
