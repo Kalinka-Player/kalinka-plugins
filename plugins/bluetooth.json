@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "bluetooth",
+  "name": "Bluetooth",
+  "summary": "Play from a phone or computer to {player} over Bluetooth.",
+  "description": "Receives Bluetooth A2DP audio from a phone or computer and routes it to the output selected in Kalinka Player, without transport compression.",
+  "distribution": "kalinka-plugin-bluetooth",
+  "entry_point": "kalinka_plugin_bluetooth",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/KalinkaPlayer", "subdirectory": "packages/kalinka-plugin-bluetooth"},
+  "tier": "unofficial",
+  "maturity": "experimental",
+  "type": "input_module",
+  "categories": ["bluetooth-audio"],
+  "delivery": "bundle",
+  "releases": []
+}
