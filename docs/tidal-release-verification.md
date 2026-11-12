@@ -1,5 +1,33 @@
 # TIDAL release verification
 
+## 0.7.0
+
+Verified on 2026-11-12 against the published [TIDAL 0.7.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.7.0).
+
+| Field | Verified value |
+| --- | --- |
+| Source tag | `kalinka-plugin-tidal-v0.7.0` |
+| Source commit | `08ed3cf30d68c8c1815733a035e39835d7ef658e` |
+| Published at | `2026-11-12T19:40:45Z` |
+| Artifact | `kalinka-plugin-tidal_0.7.0_all.deb` |
+| Size | 36,672 bytes |
+| SHA-256 | `fe2d897e572d3b6c0ae357619ca880e9d6269de4f9a0a1dc6ae6d3740d5a8b24` |
+| DEB Package / Version / Architecture | `kalinka-plugin-tidal` / `0.7.0` / `all` |
+| Python distribution / version | `kalinka-plugin-tidal` / `0.7.0` |
+| Entry point | `kalinka_plugin_tidal = kalinka_plugin_tidal:KalinkaPluginTidal` |
+
+Downloaded the DEB, `SHA256SUMS`, and `build-info.json`. All three match their GitHub asset sizes and SHA-256 digests, and the DEB matches its checksum file and build metadata, including the tagged source commit.
+
+Inspected native headers, the embedded wheel, dependencies, entry point, trigger and removal script without installing the package or executing its contents. The only payload file is the `py3-none-any` wheel under `/opt/kalinka/wheels/`; its Python modules and packaged icons match the tagged source byte for byte, apart from the generated `_version.py`.
+
+The DEB still declares `kalinka-server (>= 5.11.0)` and SDK 3.19 or newer, unchanged from 0.6.0, so this record keeps requiring server 5.17.0 or newer.
+
+The [release workflow](https://github.com/Kalinka-Player/kalinka-plugin-tidal/actions/runs/43292378651) passed all 184 tests on Python 3.11 and 3.13, plus package builds, inspections and packaged-wheel tests on Debian 13 and Ubuntu 24.04, each on ARM64 and amd64. The published package comes from Debian 13 ARM64.
+
+This release declares image cards for the TIDAL root through `root_preview()`, reports `ModuleCapability.RANKED_SEARCH` so the server keeps TIDAL's own search order, and leaves artist hits with no picture, album cover or artist mix out of search. The root's layout and the search order take effect with plugin SDK 3.22, which ships with Kalinka Player 5.19.0; the capability is looked up at import, so the plugin still loads on SDK 3.19 to 3.21, where the root stays as rows and the server ranks hits by name.
+
+These changes are covered by automated tests with fake TIDAL responses; they have not been verified live with a TIDAL account. The stable classification, unofficial tier and manual data rollback policy are unchanged.
+
 ## 0.6.0
 
 Verified on 2026-11-07 against the published [TIDAL 0.6.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.6.0).
