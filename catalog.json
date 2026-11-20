@@ -768,6 +768,69 @@
               "architectures": [
                 "all"
               ],
+              "filename": "kalinka-plugin-qobuz_5.6.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-qobuz",
+                "version": "5.6.0"
+              },
+              "platform": "linux",
+              "sha256": "fb81669ef3f32e9140af7a2dbace19acc0cb64bb264e201d9cf311d616effc9d",
+              "size_bytes": 109330,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/download/kalinka-plugin-qobuz-v5.6.0/kalinka-plugin-qobuz_5.6.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-11-20T14:10:22Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/tag/kalinka-plugin-qobuz-v5.6.0",
+          "requires": {
+            "architectures": [
+              "all"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.16.0 or newer (below 6.0.0), which brings plugin SDK 3.18, and Python 3.11 or newer.",
+              "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
+              "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+              "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
+              "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection.",
+              "Listings of catalogs and albums open as cards. With Kalinka Player server 5.19.0 or newer, which brings plugin SDK 3.22, the Qobuz root opens as cards too; an older server keeps the root as rows.",
+              "AI search suggests Qobuz's editorial playlists, shown by the Kalinka Player app 0.28.0 or newer. The text embedder's runtime (onnxruntime and tokenizers) is offered as optional packages from the package's allow-list; onnxruntime has wheels for x86_64 and aarch64 only, and the Mood / AI search setting turns the feature off."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.18,<4",
+            "server": ">=5.16,<6"
+          },
+          "source_commit": "a9bda4b322f06eb0399fa004286ac5236f33fd49",
+          "source_tag": "kalinka-plugin-qobuz-v5.6.0",
+          "version": "5.6.0",
+          "withdrawn": false
+        },
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
               "filename": "kalinka-plugin-qobuz_5.5.0_all.deb",
               "format": "deb",
               "package": {
@@ -2691,8 +2754,118 @@
       "summary": "Play to {player} from UPnP apps on your network.",
       "tier": "official",
       "type": "input_module"
+    },
+    {
+      "categories": [
+        "radio",
+        "streaming"
+      ],
+      "creator": {
+        "name": "Dmitry Savin",
+        "url": "https://github.com/madenvel"
+      },
+      "delivery": "independent",
+      "description": "Plays internet radio from radio-browser.info, a free, community-maintained directory of more than 50,000 stations: the most played, top voted and high quality stations, and stations by genre, country and language, all searchable. No account is needed. Not made or endorsed by radio-browser.info.",
+      "distribution": "kalinka-plugin-webradio",
+      "entry_point": "kalinka_plugin_webradio",
+      "icons": {
+        "monochrome": true,
+        "small": {
+          "aspect_ratio": 1.0,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/ce709f7839b68ec23de114dc30b5a857c5c3e8536c6ce1a42e6be7e7ceb764c8.svg"
+        },
+        "standard": {
+          "aspect_ratio": 1.0,
+          "mime_type": "image/svg+xml",
+          "min_height": 0.0,
+          "url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/ce709f7839b68ec23de114dc30b5a857c5c3e8536c6ce1a42e6be7e7ceb764c8.svg"
+        }
+      },
+      "id": "webradio",
+      "license": "GPL-3.0-or-later",
+      "maintainers": [
+        {
+          "name": "Kalinka Player",
+          "url": "https://github.com/Kalinka-Player"
+        }
+      ],
+      "maturity": "experimental",
+      "name": "Web Radio",
+      "releases": [
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
+              "filename": "kalinka-plugin-webradio_0.1.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-webradio",
+                "version": "0.1.0"
+              },
+              "platform": "linux",
+              "sha256": "927c829ff40b89ead2c9f350e0d12b0599ac463df9ecfb0bac436ba33d896ee8",
+              "size_bytes": 34916,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-webradio/releases/download/kalinka-plugin-webradio-v0.1.0/kalinka-plugin-webradio_0.1.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-11-20T14:15:40Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-webradio/releases/tag/kalinka-plugin-webradio-v0.1.0",
+          "requires": {
+            "architectures": [
+              "all"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.20.0 or newer (below 6.0.0), which brings plugin SDK 3.23, and Python 3.11 or newer.",
+              "No account is needed. The server reaches the radio-browser.info directory over HTTPS, and the renderer plays each station's stream from the station's own server.",
+              "Only stations the renderer can decode are listed: MP3, AAC and FLAC streams. Stations streaming over HLS, or in Opus or Ogg, are left out.",
+              "Choosing a station plays that station alone with the Kalinka Player app 0.28.0 or newer; an older app also queues the stations after it.",
+              "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is built and tested on Debian 13 and Ubuntu 24.04, on amd64 and arm64. It is not a macOS, Windows or RPM package."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.23,<4",
+            "server": ">=5.20.0,<6"
+          },
+          "source_commit": "2e13ce236ae33db0dc886c25ee16dc4b3b893a86",
+          "source_tag": "kalinka-plugin-webradio-v0.1.0",
+          "version": "0.1.0",
+          "withdrawn": false
+        }
+      ],
+      "schema_version": 1,
+      "source": {
+        "repository": "https://github.com/Kalinka-Player/kalinka-plugin-webradio",
+        "subdirectory": ""
+      },
+      "summary": "Listen to internet radio stations from around the world on {player}.",
+      "tier": "unofficial",
+      "type": "input_module"
     }
   ],
-  "revision": "ff580b710802ecb4910a1198410fa6ff979df311",
+  "revision": "902052781e68d386300d39af448b00cc994d637f",
   "schema_version": 1
 }

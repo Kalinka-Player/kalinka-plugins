@@ -39,12 +39,12 @@ class CatalogTests(unittest.TestCase):
         catalog = build_catalog()
         self.assertEqual({entry["id"] for entry in catalog["plugins"]}, {
             "bluetooth", "dummydevice", "jamendo", "localfiles", "musiccast", "upnp", "spotify", "qobuz", "roon",
-            "airplay", "tidal",
+            "airplay", "tidal", "webradio",
         })
         self.assertTrue(all(entry["releases"] == [] for entry in catalog["plugins"]
                             if entry["delivery"] == "bundle"))
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["releases"]},
-                         {"spotify", "qobuz", "roon", "airplay", "tidal"})
+                         {"spotify", "qobuz", "roon", "airplay", "tidal", "webradio"})
         self.assertEqual({entry["id"] for entry in catalog["plugins"] if entry["delivery"] == "bundle"}, {
             "bluetooth", "dummydevice", "jamendo", "localfiles", "musiccast", "upnp",
         })
@@ -58,7 +58,7 @@ class CatalogTests(unittest.TestCase):
     def test_catalog_artwork_urls_match_packaged_content_hashes(self):
         base = "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/"
         plugins = [p for p in build_catalog()["plugins"] if "icons" in p]
-        self.assertEqual({p["id"] for p in plugins}, {"qobuz", "spotify", "jamendo", "upnp", "roon", "tidal"})
+        self.assertEqual({p["id"] for p in plugins}, {"qobuz", "spotify", "jamendo", "upnp", "roon", "tidal", "webradio"})
         for plugin in plugins:
             for variant in ("small", "standard"):
                 with self.subTest(plugin=plugin["id"], variant=variant):
@@ -135,12 +135,13 @@ class CatalogTests(unittest.TestCase):
             "roon": "input_module",
             "airplay": "input_module",
             "tidal": "input_module",
+            "webradio": "input_module",
         })
 
     def test_streaming_services_are_unofficial_independent_inputs(self):
         entries = {p["id"]: p for p in build_catalog()["plugins"]}
         for plugin_id, license_id in (("spotify", "MIT"), ("qobuz", "Apache-2.0"),
-                                      ("tidal", "GPL-3.0-or-later")):
+                                      ("tidal", "GPL-3.0-or-later"), ("webradio", "GPL-3.0-or-later")):
             with self.subTest(plugin_id=plugin_id):
                 plugin = entries[plugin_id]
                 self.assertEqual(plugin["tier"], "unofficial")

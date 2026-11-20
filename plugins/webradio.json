@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "webradio",
+  "name": "Web Radio",
+  "summary": "Listen to internet radio stations from around the world on {player}.",
+  "description": "Plays internet radio from radio-browser.info, a free, community-maintained directory of more than 50,000 stations: the most played, top voted and high quality stations, and stations by genre, country and language, all searchable. No account is needed. Not made or endorsed by radio-browser.info.",
+  "icons": {
+    "small": {"url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/ce709f7839b68ec23de114dc30b5a857c5c3e8536c6ce1a42e6be7e7ceb764c8.svg", "mime_type": "image/svg+xml", "aspect_ratio": 1.0, "min_height": 0.0},
+    "standard": {"url": "https://raw.githubusercontent.com/Kalinka-Player/kalinka-plugins/main/assets/icons/ce709f7839b68ec23de114dc30b5a857c5c3e8536c6ce1a42e6be7e7ceb764c8.svg", "mime_type": "image/svg+xml", "aspect_ratio": 1.0, "min_height": 0.0},
+    "monochrome": true
+  },
+  "distribution": "kalinka-plugin-webradio",
+  "entry_point": "kalinka_plugin_webradio",
+  "creator": {"name": "Dmitry Savin", "url": "https://github.com/madenvel"},
+  "maintainers": [{"name": "Kalinka Player", "url": "https://github.com/Kalinka-Player"}],
+  "license": "GPL-3.0-or-later",
+  "source": {"repository": "https://github.com/Kalinka-Player/kalinka-plugin-webradio", "subdirectory": ""},
+  "type": "input_module",
+  "tier": "unofficial",
+  "maturity": "experimental",
+  "categories": ["radio", "streaming"],
+  "delivery": "independent",
+  "releases": [
+    {
+      "version": "0.1.0",
+      "channel": "stable",
+      "published_at": "2026-11-20T14:15:40Z",
+      "source_tag": "kalinka-plugin-webradio-v0.1.0",
+      "source_commit": "2e13ce236ae33db0dc886c25ee16dc4b3b893a86",
+      "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-webradio/releases/tag/kalinka-plugin-webradio-v0.1.0",
+      "requires": {
+        "server": ">=5.20.0,<6",
+        "sdk": ">=3.23,<4",
+        "python": ">=3.11",
+        "platforms": ["linux"],
+        "architectures": ["all"],
+        "capabilities": [],
+        "notes": [
+          "Requires Kalinka Player server 5.20.0 or newer (below 6.0.0), which brings plugin SDK 3.23, and Python 3.11 or newer.",
+          "No account is needed. The server reaches the radio-browser.info directory over HTTPS, and the renderer plays each station's stream from the station's own server.",
+          "Only stations the renderer can decode are listed: MP3, AAC and FLAC streams. Stations streaming over HLS, or in Opus or Ogg, are left out.",
+          "Choosing a station plays that station alone with the Kalinka Player app 0.28.0 or newer; an older app also queues the stations after it.",
+          "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is built and tested on Debian 13 and Ubuntu 24.04, on amd64 and arm64. It is not a macOS, Windows or RPM package."
+        ]
+      },
+      "data_rollback": "manual",
+      "withdrawn": false,
+      "artifacts": [
+        {
+          "format": "deb",
+          "filename": "kalinka-plugin-webradio_0.1.0_all.deb",
+          "platform": "linux",
+          "architectures": ["all"],
+          "package": {"name": "kalinka-plugin-webradio", "version": "0.1.0", "architecture": "all"},
+          "targets": [{"id": "debian", "versions": ["13"]}, {"id": "ubuntu", "versions": ["24.04"]}],
+          "url": "https://github.com/Kalinka-Player/kalinka-plugin-webradio/releases/download/kalinka-plugin-webradio-v0.1.0/kalinka-plugin-webradio_0.1.0_all.deb",
+          "sha256": "927c829ff40b89ead2c9f350e0d12b0599ac463df9ecfb0bac436ba33d896ee8",
+          "size_bytes": 34916
+        }
+      ]
+    }
+  ]
+}

@@ -33,3 +33,7 @@ from https://assets.tidal.com/press/TIDAL-Logo%26Fonts-2021Q4.zip
 (retrieved 2026-10-30, converted 2026-10-31). Diamond paths and proportions
 are preserved and rendered in black or white for compact app attribution.
 https://developer.tidal.com/documentation/guidelines/guidelines-design-guidelines
+
+Web Radio: original Kalinka artwork, GPL-3.0-or-later, copied from
+kalinka-plugin-webradio/src/kalinka_plugin_webradio/icons/webradio.svg at
+kalinka-plugin-webradio-v0.1.0. A generic radio mark, not radio-browser.info's.
