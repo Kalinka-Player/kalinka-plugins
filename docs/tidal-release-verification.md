@@ -1,5 +1,33 @@
 # TIDAL release verification
 
+## 0.8.0
+
+Verified on 2026-11-26 against the published [TIDAL 0.8.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.8.0).
+
+| Field | Verified value |
+| --- | --- |
+| Source tag | `kalinka-plugin-tidal-v0.8.0` |
+| Source commit | `76a9f8a49f93db0b731c72d83ca5103d48a73d15` |
+| Published at | `2026-11-26T18:34:11Z` |
+| Artifact | `kalinka-plugin-tidal_0.8.0_all.deb` |
+| Size | 38,580 bytes |
+| SHA-256 | `20e27eff79354f9bf71c777cda56c130670b3ca60f8cb6f669ff5bf675cf5ee2` |
+| DEB Package / Version / Architecture | `kalinka-plugin-tidal` / `0.8.0` / `all` |
+| Python distribution / version | `kalinka-plugin-tidal` / `0.8.0` |
+| Entry point | `kalinka_plugin_tidal = kalinka_plugin_tidal:KalinkaPluginTidal` |
+
+Downloaded the DEB, `SHA256SUMS`, and `build-info.json`. All three match their GitHub asset sizes and SHA-256 digests, and the DEB matches its checksum file and build metadata, including the tagged source commit.
+
+Inspected native headers, the embedded wheel, dependencies, entry point, trigger and removal script without installing the package or executing its contents. The only payload file is the `py3-none-any` wheel under `/opt/kalinka/wheels/`; its Python modules and packaged icons match the tagged source byte for byte, apart from the generated `_version.py`.
+
+The DEB still declares `kalinka-server (>= 5.11.0)` and SDK 3.19 or newer, unchanged from 0.7.0, so this record keeps requiring server 5.17.0 or newer.
+
+The [release workflow](https://github.com/Kalinka-Player/kalinka-plugin-tidal/actions/runs/45876749610) passed all 215 tests on Python 3.11 and 3.13, plus package builds, inspections and packaged-wheel tests on Debian 13 and Ubuntu 24.04, each on ARM64 and amd64. The published package comes from Debian 13 ARM64.
+
+This release marks and unmarks TIDAL favourites through TIDAL's v1 favourites endpoints, reads every favourite id in one request, and lists favourite tracks, albums and artists most recently marked first. It reports `ModuleCapability.FAVORITES` while signed in, looked up at import, so the plugin still loads on SDK 3.19 to 3.23. Kalinka Player 5.21.0, which ships plugin SDK 3.24, asks for favourites only from sources reporting that capability, so TIDAL 0.7.0 drops out of the app's favourites there.
+
+The favourites endpoints were exercised live against a TIDAL account before release, as recorded in [kalinka-plugin-tidal#17](https://github.com/Kalinka-Player/kalinka-plugin-tidal/pull/17); the rest is covered by automated tests with fake TIDAL responses. The stable classification, unofficial tier and manual data rollback policy are unchanged.
+
 ## 0.7.0
 
 Verified on 2026-11-12 against the published [TIDAL 0.7.0 release](https://github.com/Kalinka-Player/kalinka-plugin-tidal/releases/tag/kalinka-plugin-tidal-v0.7.0).
