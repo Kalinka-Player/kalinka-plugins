@@ -768,6 +768,71 @@
               "architectures": [
                 "all"
               ],
+              "filename": "kalinka-plugin-qobuz_5.7.0_all.deb",
+              "format": "deb",
+              "package": {
+                "architecture": "all",
+                "name": "kalinka-plugin-qobuz",
+                "version": "5.7.0"
+              },
+              "platform": "linux",
+              "sha256": "63c060981bf9a4c164aa6447d83a343bea4670ff3747e24f4680dc14fa82baba",
+              "size_bytes": 111480,
+              "targets": [
+                {
+                  "id": "debian",
+                  "versions": [
+                    "13"
+                  ]
+                },
+                {
+                  "id": "ubuntu",
+                  "versions": [
+                    "24.04"
+                  ]
+                }
+              ],
+              "url": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/download/kalinka-plugin-qobuz-v5.7.0/kalinka-plugin-qobuz_5.7.0_all.deb"
+            }
+          ],
+          "channel": "stable",
+          "data_rollback": "manual",
+          "published_at": "2026-11-27T11:56:59Z",
+          "release_notes": "https://github.com/Kalinka-Player/kalinka-plugin-qobuz/releases/tag/kalinka-plugin-qobuz-v5.7.0",
+          "requires": {
+            "architectures": [
+              "all"
+            ],
+            "capabilities": [],
+            "notes": [
+              "Requires Kalinka Player server 5.21.0 or newer (below 6.0.0), which brings plugin SDK 3.24, and Python 3.11 or newer. The package does not install on an older server.",
+              "An active Qobuz subscription is required. This integration is not endorsed by Qobuz.",
+              "The package is architecture-independent but requires a compatible Debian-packaged Kalinka Player server and resolvable Python dependencies. It is not a macOS, Windows or RPM package.",
+              "Initial distro allowlist is Debian 13 and Ubuntu 24.04. Upstream describes broader Debian-family support; expand the curated list only after review.",
+              "Qobuz Connect pairing requires local-network mDNS (UDP 5353) and TCP 8183 by default; playback handoffs also need an outbound WebSocket connection.",
+              "The Qobuz root and every listing of catalogs and albums open as cards.",
+              "AI search suggests Qobuz's editorial playlists, shown by the Kalinka Player app 0.28.0 or newer. The text embedder's runtime (onnxruntime and tokenizers) is offered as optional packages from the package's allow-list; onnxruntime has wheels for x86_64 and aarch64 only, and the Mood / AI search setting turns the feature off.",
+              "Qobuz supplies tracks for the server's Keep playing and for Add similar tracks in the Kalinka Player app 0.29.0 or newer, which also marks and unmarks Qobuz favourites with a heart. The Qobuz root gains My Favourites, with a catalog for each kind of favourite.",
+              "Server 5.21.0 lists favourites only from sources that say they keep them, so with Qobuz 5.6.0 or older Qobuz drops out of the app's Favourites. Upgrade Qobuz together with the server."
+            ],
+            "platforms": [
+              "linux"
+            ],
+            "python": ">=3.11",
+            "sdk": ">=3.24,<4",
+            "server": ">=5.21,<6"
+          },
+          "source_commit": "1953a56a043f58204310483dbf44f6cb9da31acd",
+          "source_tag": "kalinka-plugin-qobuz-v5.7.0",
+          "version": "5.7.0",
+          "withdrawn": false
+        },
+        {
+          "artifacts": [
+            {
+              "architectures": [
+                "all"
+              ],
               "filename": "kalinka-plugin-qobuz_5.6.0_all.deb",
               "format": "deb",
               "package": {
@@ -2932,6 +2997,6 @@
       "type": "input_module"
     }
   ],
-  "revision": "84cc91096cb139d3200cff8f593932d9902bcc61",
+  "revision": "94c4312c0a2981c905aa6064f74c5159ac27da05",
   "schema_version": 1
 }
